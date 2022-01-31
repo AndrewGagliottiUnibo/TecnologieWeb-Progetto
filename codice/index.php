@@ -5,11 +5,19 @@
     <!--    Sia W3School che AChecker me lo indicano come codice HTML corretto e accessibile    -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home page CacPlus.inc</title>
+    <title>CacPlus.inc</title>
+    <link rel="stylesheet" href="../codice/css/homePage.css">
 </head>
 
 <body>
-    <?php include "template/navbar.php";?>
+    <header>
+        <?php include "template/navbar.php";?>
+        <section class="banner">
+            <h1>CacPlus</h1>
+            <p>Piante belle</p>
+        </section>
+
+    </header>
     <main>
         <section>
             <h2>In Evidenza</h2>
