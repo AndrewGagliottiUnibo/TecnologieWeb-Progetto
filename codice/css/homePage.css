@@ -1,62 +1,55 @@
+/* Mobile first */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: whitesmoke;
 }
 
-nav *, nav{
-    background-color: #C1E1C1;
+body {
+    background-color: blanchedalmond;
+    overflow-x: hidden;
 }
 
-.top_nav{
+/* Navigation bar */
+nav, nav * {
+    background-color: #BEE5B0;
+}
+
+.top_nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0% 10%;
 }
 
-.nav_logo {
-    cursor: pointer;
-}
-  
-.top_nav ul {
-    list-style: none;
-}
-
-.top_nav ul li {
-    display: inline-block;
-    padding: 0px 20px;
-}
-
-.top_nav ul li a:hover {
-    background-color: yellow;
+.bottom_nav {
+    position: fixed;
+    overflow-x: hidden;
+    transition: 0.4s;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 0;
+    height: 100%;
 }
 
-/*
-
-nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;}
-  
-li {
-    float: left;}
-
-li a {
-    display: block;
-    color: white;
+.bottom_nav a {
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;}
+    display: block;
+    font-size: x-large;
+    color: black;
+    box-sizing: border-box;
+    padding: 10% 0%;
+}
 
-.banner {
-    background-image: url("../../immagini/banner.jpg");
-    background-size: auto;}
+.top_nav a:hover * {
+    background-color: green;
+}
 
-.banner h1, .banner p {
-    text-align: center;}
-  
-/* Change the link color to #111 (black) on hover */
+.bottom_nav a:hover, .bottom_nav a:hover * {
+    background-color: green;
+}

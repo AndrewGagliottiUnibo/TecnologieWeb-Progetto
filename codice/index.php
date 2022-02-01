@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CacPlus.inc</title>
     <link rel="stylesheet" href="../codice/css/homePage.css">
+    <script type="text/javascript" src="../codice/script/navbar.js"></script>
 </head>
 
 <body>
