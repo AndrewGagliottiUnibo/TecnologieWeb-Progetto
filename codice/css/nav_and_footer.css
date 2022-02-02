@@ -1,0 +1,136 @@
+/* Mobile first */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: blanchedalmond;
+    overflow-x: hidden;
+}
+
+/* Navigation bar */
+nav, nav * {
+    background-color: #BEE5B0;
+}
+
+.logo{
+    font-size: xx-large;
+    text-decoration: solid;
+    color: black;
+}
+
+.top_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0% 10%;
+}
+
+.right_nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom_nav {
+    position: fixed;
+    overflow-x: hidden;
+    transition: 0.4s;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 0;
+    height: 100%;
+}
+
+.bottom_nav a {
+    text-align: center;
+    font-size: larger;
+    display: block;
+    text-decoration: solid;
+    color: black;
+    box-sizing: border-box;
+    padding: 10% 0%;
+}
+
+.top_nav a:hover * {
+    background-color: green;
+}
+
+.bottom_nav a:hover, .bottom_nav a:hover * {
+    background-color: green;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+    justify-content: center;
+    background-image: url("../../immagini/banner.jpg");
+    background-size: cover;
+    padding: 10% 0%;
+}
+
+/* Footer */
+
+footer {
+    padding: 1% 0%;
+    flex-direction: column-reverse;
+}
+
+footer, footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+    background-color: #BEE5B0;
+}
+
+footer ul li {
+    display: flex;
+    padding: 0% 10%;
+}
+
+
+@media screen and (min-width:768px){
+
+    /* NavBar */
+    .bottom_nav {
+        position: unset;
+        z-index: 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+        height: unset;
+    }
+
+    .bottom_nav a {
+        text-align: center;
+        display: block;
+        font-size: large;
+        color: black;
+        box-sizing: border-box;
+        padding: 2% 2%;
+    }
+
+    #exit, #menu {
+        display: none;
+    }
+
+    /* Footer */
+
+    footer {
+        flex-direction: row;
+    }
+}
