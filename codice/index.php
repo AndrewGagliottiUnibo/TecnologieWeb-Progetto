@@ -11,13 +11,10 @@
 </head>
 
 <body>
+    <?php include "template/navbar.php";?>
     <header>
-        <?php include "template/navbar.php";?>
-        <section class="banner">
-            <h1>CacPlus</h1>
-            <p>Piante belle</p>
-        </section>
-
+        <h1>CacPlus</h1>
+        <p>Piante belle</p>
     </header>
     <main>
         <section>
