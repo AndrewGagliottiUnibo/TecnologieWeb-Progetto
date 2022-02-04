@@ -1,4 +1,9 @@
 /* Mobile first */
+:root {
+    --main-theme-color: #BEE5B0;
+    --main-bg-color: blanchedalmond;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,13 +11,13 @@
 }
 
 body {
-    background-color: blanchedalmond;
+    background-color: var(--main-bg-color);
     overflow-x: hidden;
 }
 
 /* Navigation bar */
 nav, nav * {
-    background-color: #BEE5B0;
+    background-color: var(--main-theme-color);
 }
 
 .logo{
@@ -92,7 +97,7 @@ footer, footer ul {
     align-items: center;
     justify-content: space-around;
     align-content: center;
-    background-color: #BEE5B0;
+    background-color: var(--main-theme-color);
 }
 
 footer ul li {
