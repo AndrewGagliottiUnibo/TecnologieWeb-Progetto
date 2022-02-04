@@ -88,6 +88,7 @@ header {
 /* Footer */
 
 footer {
+    margin-top: auto;
     padding: 1% 0%;
     flex-direction: column-reverse;
 }
@@ -137,5 +138,8 @@ footer ul li {
 
     footer {
         flex-direction: row;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
     }
 }
