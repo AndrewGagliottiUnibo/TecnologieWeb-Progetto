@@ -80,7 +80,7 @@ header {
     align-items: center;
     align-content: space-between;
     justify-content: center;
-    background-image: url("../../immagini/banner.jpg");
+    background-image: url("../../../immagini/banner.jpg");
     background-size: cover;
     padding: 10% 0%;
 }

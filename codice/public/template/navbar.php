@@ -2,7 +2,7 @@
     <div class="top_nav">
         <a id="menu" href="javascript:void(0)" onclick="openNav()"><img
                 src="https://img.icons8.com/ios-filled/50/000000/menu--v4.png" /></a>
-        <a class="logo" href="index.php" title="Vai alla pagina principale">CacPlus</a>
+        <a class="logo" href="<?php echo ROOT_URL;?>public?page=homepage" title="Vai alla pagina principale">CacPlus</a>
         <!-- Nuova pagina -->
         <div class="right_nav">
             <a href="#"><img
@@ -25,5 +25,7 @@
 
         <a class="collapsable" href="#">Notifiche</a>
         <!-- Nuova pagina -->
+
+        <a class="collapsable" href="<?php echo ROOT_URL;?>public?page=chi_siamo">Chi Siamo</a>
     </div>
 </nav>
