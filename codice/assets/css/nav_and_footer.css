@@ -108,6 +108,20 @@ footer ul li {
     padding: 0% 10%;
 }
 
+/* Evidenza */
+
+.evidenza {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.evidenza > h1 {
+    font-size: x-large;
+}
+
+
 
 @media screen and (min-width:768px){
 
