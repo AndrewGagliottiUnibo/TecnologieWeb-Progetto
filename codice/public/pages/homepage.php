@@ -27,6 +27,6 @@
     </div>
 </section>
 
-<section>
-    <button type="button">Visita il catalogo</button>
+<section class="vai_catalogo">
+    <a href="<?php echo ROOT_URL;?>public?page=catalogo">Vai al catalogo</a>
 </section>

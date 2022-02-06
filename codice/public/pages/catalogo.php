@@ -15,6 +15,7 @@
                 <div class="text">
                     <h4><a href="#card-link"><?php echo $product->name ?></a></h4>
                     <p><?php echo $product->description ?></p>
+                    <p class="price">&euro;<?php echo $product->price ?></p>
                 </div>
             </li>
 
