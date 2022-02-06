@@ -13,7 +13,6 @@ $page = isset($_GET["page"]) ? $_GET["page"] : "homepage";
     <title>CacPlus.inc</title>
     <link rel="stylesheet" href="../assets/css/homepage.css">
     <link rel="stylesheet" href="../assets/css/nav_and_footer.css">
-    <script type="text/javascript" src="../assets/script/navbar.js"></script>
 </head>
 
 <body>
@@ -23,5 +22,8 @@ $page = isset($_GET["page"]) ? $_GET["page"] : "homepage";
     </main>
     <?php include ROOT_PATH . "/codice/public/template/footer.php";?>
 </body>
+
+<script type="text/javascript" src="../assets/script/navbar.js"></script>
+<script type="text/javascript" src="../assets/script/card.js"></script>
 
 </html>

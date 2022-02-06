@@ -8,21 +8,23 @@
 ?>
 
 <section class="evidenza">
-    <h2>In Evidenza</h2>
+    <h3>In Evidenza</h3>
 
-    <?php foreach($products as $product) : ?>
+    <div class="cards">
+        <ul>
+            <?php foreach($products as $product) : ?>
+                
+            <li class="card">
+                <div class="img"><img src="<?php echo IMAGE_URL . $product->image . ".jpg"?>" alt=""></div>
+                <div class="text">
+                    <h4><a href="#card-link"><?php echo $product->name ?></a></h4>
+                    <p><?php echo $product->description ?></p>
+                </div>
+            </li>
 
-        <div class="card">
-            <h5 class="product_title"><?php echo $product->name ;?></h5>
-            <img src="<?php 
-                            $img = "http://localhost/tw/immagini/" . $product->image . ".jpg";
-                            echo($img);?>" 
-                alt="<?php echo $product->name ;?>" />
-            <p class="price"><?php echo $product->price ;?></p>
-            <p><?php echo $product->description ;?></p>
-        </div>
-    <?php endforeach; ?>
-
+            <?php endforeach; ?>
+        </ul>
+    </div>
 </section>
 
 <section>
