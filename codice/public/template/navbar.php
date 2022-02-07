@@ -5,7 +5,7 @@
         <a class="logo" href="<?php echo ROOT_URL;?>public?page=homepage">CacPlus</a>
         <!-- Nuova pagina -->
         <div class="right_nav">
-            <a href="#"><img
+            <a href="<?php echo ROOT_URL;?>public?page=login"><img
                     src="https://img.icons8.com/external-kmg-design-detailed-outline-kmg-design/64/000000/external-user-user-interface-kmg-design-detailed-outline-kmg-design-1.png" /></a>
 
             <a href="#"><img
