@@ -1,4 +1,5 @@
 /* Mobile first */
+
 :root {
     --main-theme-color: #9FE2BF;
     --main-bg-color: #E6F2D4;
@@ -17,12 +18,15 @@ body {
     overflow-x: hidden;
 }
 
+
 /* Navigation bar */
-nav, nav * {
+
+nav,
+nav * {
     background-color: var(--main-theme-color);
 }
 
-.logo{
+.logo {
     font-size: xx-large;
     text-decoration: solid;
     color: black;
@@ -71,6 +75,7 @@ nav, nav * {
     background-color: var(--main-hv-color);
 }
 
+
 /* Header */
 
 header {
@@ -85,6 +90,7 @@ header {
     padding: 10% 0%;
 }
 
+
 /* Footer */
 
 footer {
@@ -93,7 +99,8 @@ footer {
     width: 100%;
 }
 
-footer, footer ul {
+footer,
+footer ul {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -106,9 +113,11 @@ footer ul li {
     padding: 0% 10%;
 }
 
+
 /* Evidenza */
 
-.evidenza, .catalogo {
+.evidenza,
+.catalogo {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -118,11 +127,13 @@ footer ul li {
     padding: 2rem;
 }
 
-.evidenza > h3, .catalogo > h3 {
+.evidenza>h3,
+.catalogo>h3 {
     font-size: x-large;
 }
 
-.evidenza > *, .catalogo > * {
+.evidenza>*,
+.catalogo>* {
     padding: 5%;
 }
 
@@ -134,7 +145,7 @@ footer ul li {
     padding: 1% 0%;
 }
 
-.vai_catalogo > a {
+.vai_catalogo>a {
     min-width: 70%;
     padding: 2% 0%;
     border: 2px solid;
@@ -157,29 +168,29 @@ footer ul li {
     background-color: #F9FCF4;
 }
 
+
 /* Card */
 
 .cards {
     width: 100%;
 }
 
-.cards > ul {
+.cards>ul {
     list-style: none;
 }
 
-.card + .card {
+.card+.card {
     margin-top: 1.5rem;
 }
 
 @supports (display: grid) {
-    .cards > ul {
+    .cards>ul {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
         grid-column-gap: 1.5rem;
-        grid-row-gap:1.5rem;
+        grid-row-gap: 1.5rem;
     }
-
-    .card + .card {
+    .card+.card {
         margin-top: 0;
     }
 }
@@ -192,7 +203,7 @@ footer ul li {
     display: flex;
     flex-direction: column;
     position: relative;
-    background-color: var(--main-theme-color) ;
+    background-color: var(--main-theme-color);
     transition: 0.5s;
 }
 
@@ -243,7 +254,8 @@ footer ul li {
     text-decoration: underline;
 }
 
-.card:focus-within, .card:hover {
+.card:focus-within,
+.card:hover {
     margin-top: -10%;
     margin-bottom: 10%;
 }
@@ -256,19 +268,16 @@ footer ul li {
     display: block;
 }
 
-.card .text > * + * {
+.card .text>*+* {
     margin-top: 0.75rem;
 }
 
-.card .text > :last-child {
+.card .text> :last-child {
     margin-top: auto;
     padding-top: 0.75rem;
 }
 
-
-
-@media screen and (min-width:768px){
-
+@media screen and (min-width:768px) {
     /* NavBar */
     .bottom_nav {
         position: unset;
@@ -280,7 +289,6 @@ footer ul li {
         width: 100%;
         height: unset;
     }
-
     .bottom_nav a {
         text-align: center;
         display: block;
@@ -289,20 +297,16 @@ footer ul li {
         box-sizing: border-box;
         padding: 2% 2%;
     }
-
-    #exit, #menu {
+    #exit,
+    #menu {
         display: none;
     }
-
     /* Footer */
-
     footer {
         flex-direction: row;
     }
-
     /* In Evidenza */
-
-    .vai_catalogo > a {
+    .vai_catalogo>a {
         min-width: 0%;
         width: 30%;
     }
