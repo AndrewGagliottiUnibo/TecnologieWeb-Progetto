@@ -21,10 +21,10 @@
         <a class="collapsable" href="<?php echo ROOT_URL;?>public?page=catalogo">Catalogo</a>
         <!-- Nuova pagina -->
 
-        <a class="collapsable" href="#">Info e Contatti</a>
+        <a class="collapsable" href="#">Notifiche</a>
         <!-- Nuova pagina -->
 
-        <a class="collapsable" href="#">Notifiche</a>
+        <a class="collapsable" href="<?php echo ROOT_URL;?>public?page=info">Info e Contatti</a>
         <!-- Nuova pagina -->
 
         <a class="collapsable" href="<?php echo ROOT_URL;?>public?page=chi_siamo">Chi Siamo</a>
