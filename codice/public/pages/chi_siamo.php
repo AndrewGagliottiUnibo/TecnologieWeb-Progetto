@@ -14,7 +14,7 @@
     <article>
         <h2>Sviluppi passati:</h2>
             <p>Precedentemente, abbiamo realizzato e prodotto un gioco in Java dal nome <span><em>SpaceRunners</em></span>: un minigioco scritto totalmente in <em>Java</em> e in grado di girare su qualsiasi Sistema Operativo. Di questo progetto ne andiamo molto fieri ma capimmo all'epoca che la nostra vera vocazione doveva essere altrove.</p>
-            <p>Ecco il <a href="https://github.com/AndrewGagliottiUnibo/SpaceRunners/tree/release">link</a> al repository del gioco con annesso download.</p>
+            <p>Ecco il <a id="spaceRunners" href="https://github.com/AndrewGagliottiUnibo/SpaceRunners/tree/release">link</a> al repository del gioco con annesso download.</p>
     </article>
 </section>
     

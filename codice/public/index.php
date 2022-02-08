@@ -11,8 +11,7 @@ $page = isset($_GET["page"]) ? $_GET["page"] : "homepage";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CacPlus.inc</title>
-    <link rel="stylesheet" href="../assets/css/homepage.css">
-    <link rel="stylesheet" href="../assets/css/nav_and_footer.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
