@@ -17,7 +17,7 @@
             <li class="card">
                 <div class="img"><img src="<?php echo IMAGE_URL . $product->image . ".png"?>" alt=""></div>
                 <div class="text">
-                    <h4><a href="#card-link"><?php echo $product->name ?></a></h4>
+                    <h4><a href="<?php echo ROOT_URL."shop/?page=product&id=".$product->id ?>"><?php echo $product->name ?></a></h4>
                     <p class="price">&euro;<?php echo $product->price ?></p>
                 </div>
             </li>
@@ -28,5 +28,5 @@
 </section>
 
 <section class="vai_catalogo">
-    <a href="<?php echo ROOT_URL;?>public?page=catalogo">Vai al catalogo</a>
+    <a href="<?php echo ROOT_URL;?>shop?page=catalogo">Vai al catalogo</a>
 </section>

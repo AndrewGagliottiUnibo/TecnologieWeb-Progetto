@@ -85,8 +85,11 @@ header {
     align-items: center;
     align-content: space-between;
     justify-content: center;
-    background-image: url("../../../immagini/banner.jpg");
+    background-image: url("../../../immagini/banner6.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-position-y: 60%;
     padding: 10% 0%;
 }
 

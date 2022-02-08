@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Feb 07, 2022 alle 13:06
+-- Creato il: Feb 08, 2022 alle 13:00
 -- Versione del server: 10.4.21-MariaDB
 -- Versione PHP: 8.0.12
 
@@ -20,6 +20,46 @@ SET time_zone = "+00:00";
 --
 -- Database: `cacplus`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `cart`
+--
+
+CREATE TABLE `cart` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `client_id` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dump dei dati per la tabella `cart`
+--
+
+INSERT INTO `cart` (`id`, `user_id`, `client_id`) VALUES
+(1, 0, '80cb180d085578194840');
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `cart_item`
+--
+
+CREATE TABLE `cart_item` (
+  `id` int(11) NOT NULL,
+  `cart_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dump dei dati per la tabella `cart_item`
+--
+
+INSERT INTO `cart_item` (`id`, `cart_id`, `product_id`, `quantity`) VALUES
+(1, 1, 3, 2),
+(2, 1, 9, 1);
 
 -- --------------------------------------------------------
 
@@ -41,7 +81,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `price`, `image`, `description`, `highlighted`) VALUES
-(1, 'Ciond-actus', '2.50', 'cactusMiccia', 'Simbolo per veri intenditori che non hanno bisogno di una vita troppo sfarzosa.', 1),
+(1, 'Cactus con miccia', '2.50', 'cactusMiccia', 'Cactus di porcellana attaccata ad una corda e pieno di polvere nera. Se lanciato alle spalle, può ostacolare gli inseguitori.\r\n\r\nE\' identico ad un comune cactus, tranne per la direzione in cui viene lanciato.', 1),
 (2, 'Cactus morbidoso (Verde)', '10.00', 'morbidosoVerde', 'Chi non vorrebbe abbracciare un cactus e sentirsi al sicuro da ogni pericolo? Ora puoi!\r\n\r\nATTENZIONE: non è garantita la totale assenza di spine, tenere lontano dalla portata dei bambini.', 0),
 (3, 'Cactus morbidoso (Rosso)', '10.00', 'morbidosoRosso', 'Chi non vorrebbe abbracciare un cactus e sentirsi al sicuro da ogni pericolo? Ora puoi!\r\n\r\nATTENZIONE: non è garantita la totale assenza di spine, tenere lontano dalla portata dei bambini.', 0),
 (4, 'Bevanda Cac-tastica (0.5L)', '1.50', 'bevandaMezza', 'Sei assetato e hai bisogno di energie immediatamente? Acquista la nostra nuova bevanda energetica per non rimanere mai a secco!\r\n\r\n', 1),
@@ -50,12 +90,25 @@ INSERT INTO `products` (`id`, `name`, `price`, `image`, `description`, `highligh
 (7, 'Mine-Cactus (Full stack)', '100.00', 'cactusMC', 'Il cactus digitale diviene finalmente realtà! Come non volerlo aggiungere alla propria collezione di loli.\r\n\r\nConfezione full stack (x64)', 0),
 (8, 'Cactus 404', '0.00', 'null', 'Il cactus introvabile: ordinalo a tuo rischio e pericolo.\r\n\r\nNon garantiamo rimborsi in caso di mancato ricevimento di questo articolo.', 1),
 (9, 'Cactus', '1.00', 'cactusNormal', 'E\' un cactus.', 0),
-(10, 'Cat-tus', '3.00', 'cattus', 'Le due cose più adorabili che possano esistere in un unico pacchetto formato convenienza.', 0),
-(11, 'Divan-actus', '500.00', 'cactusDivano', 'Un divano terapeutico progettato proprio per lasciare il segno.', 0);
+(10, 'Cat-tus', '3.00', 'cattus', 'Le due cose più adorabili che possano esistere in un unico pacchetto formato convenienza.', 0);
 
 --
 -- Indici per le tabelle scaricate
 --
+
+--
+-- Indici per le tabelle `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indici per le tabelle `cart_item`
+--
+ALTER TABLE `cart_item`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `cart_id` (`cart_id`),
+  ADD KEY `product_id` (`product_id`);
 
 --
 -- Indici per le tabelle `products`
@@ -68,10 +121,33 @@ ALTER TABLE `products`
 --
 
 --
+-- AUTO_INCREMENT per la tabella `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT per la tabella `cart_item`
+--
+ALTER TABLE `cart_item`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT per la tabella `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- Limiti per le tabelle scaricate
+--
+
+--
+-- Limiti per la tabella `cart_item`
+--
+ALTER TABLE `cart_item`
+  ADD CONSTRAINT `cart_item_ibfk_1` FOREIGN KEY (`cart_id`) REFERENCES `cart` (`id`),
+  ADD CONSTRAINT `cart_item_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -22,7 +22,6 @@ class DB {
 
     public function select_all($tableName, $columns = array()){
         $strCol = "";
-        //var_dump($columns); die;
         foreach($columns as $colName) {
             $strCol .= " ". $colName . ",";
         }
@@ -32,13 +31,11 @@ class DB {
         $stmt = $this->db->prepare($query);
         $stmt->execute();
         $result = $stmt->get_result();
-
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
     public function select_all_highlighted($tableName, $columns = array()){
         $strCol = "";
-        //var_dump($columns); die;
         foreach($columns as $colName) {
             $strCol .= " ". $colName . ",";
         }
@@ -48,14 +45,11 @@ class DB {
         $stmt = $this->db->prepare($query);
         $stmt->execute();
         $result = $stmt->get_result();
-
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
     public function select_one($tableName, $columns = array(), $id) {
-
         $strCol = "";
-        //var_dump($columns); die;
         foreach($columns as $colName) {
             $strCol .= " ". $colName . ",";
         }
@@ -65,8 +59,52 @@ class DB {
         $stmt = $this->db->prepare($query);
         $stmt->execute();
         $result = $stmt->get_result();
-
         return $result->fetch_all(MYSQLI_ASSOC);
+    }
+    
+    //Bisogna adattare la logica per bene e sanitizzare inputs
+    public function delete_one($tableName, $id) {
+        $query = "DELETE FROM $tableName WHERE id = $id";
+    
+        $stmt = $this->db->prepare($query);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+    
+    public function update_one($tableName, $columns = array(), $id) {
+        $strCol = '';
+        foreach($columns as $colName => $colValue) {
+          $strCol .= " " . $colName . " = '$colValue' ,";
+        }
+        $strCol = substr($strCol, 0, -1);
+    
+        $query = "UPDATE $tableName SET $strCol WHERE id = $id";
+    
+        $stmt = $this->db->prepare($query);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+    
+    public function insert_one ($tableName, $columns = array()) {
+    
+        $strCol = '';
+        foreach($columns as $colName => $colValue) {
+            $strCol .= ' ' . $colName . ',';
+        }
+        $strCol = substr($strCol, 0, -1);
+    
+        $strColValues = '';
+        foreach($columns as $colName => $colValue) {
+          $strColValues .= " '" . $colValue . "' ,";
+        }
+        $strColValues = substr($strColValues, 0, -1);
+    
+        $query = "INSERT INTO $tableName ($strCol) VALUES ($strColValues)";
+        //var_dump($query); die;
+        $stmt = $this->db->prepare($query);
+        return $stmt->execute();
     }
 }
 
@@ -85,7 +123,7 @@ class DBManager {
     
     public function get($id) {
         $resultArr = $this->db->select_one($this->tableName, $this->columns, (int)$id);
-        return (object) $resultArr;
+        return (object) $resultArr[0];
     }
     
     public function getAll() {
@@ -105,7 +143,7 @@ class DBManager {
         }
         return $objects;
     }
-    /*
+
     public function create($obj) {
         $newId = $this->db->insert_one($this->tableName, (array) $obj);
         return $newId;
@@ -119,6 +157,6 @@ class DBManager {
     public function update($obj, $id) {
         $rowsUpdated = $this->db->update_one($this->tableName, (array) $obj, (int)$id);
         return (int) $rowsUpdated;
-    }*/
+    }
     }
 ?>

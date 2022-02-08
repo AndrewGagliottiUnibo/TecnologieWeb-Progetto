@@ -18,7 +18,7 @@
         <a id="exit" href="javascript:void(0)" onclick="closeNav()"><img
                 src="https://img.icons8.com/ios/50/000000/delete-sign--v1.png" /></a>
                 
-        <a class="collapsable" href="<?php echo ROOT_URL;?>public?page=catalogo">Catalogo</a>
+        <a class="collapsable" href="<?php echo ROOT_URL;?>shop?page=catalogo">Catalogo</a>
         <!-- Nuova pagina -->
 
         <a class="collapsable" href="#">Info e Contatti</a>
