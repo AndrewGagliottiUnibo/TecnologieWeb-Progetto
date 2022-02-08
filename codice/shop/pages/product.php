@@ -39,7 +39,7 @@
     <p><?php echo $product->description ?></p>
   </div>
   <form method="post">
-        <input name="add_to_cart" type="submit" value="Aggiungi al carrello">
-        <input type="button" value="Delete">
-      </form>   
+    <input name="add_to_cart" type="submit" value="Aggiungi al carrello">
+    <input type="button" value="Delete">
+  </form>   
 </section>

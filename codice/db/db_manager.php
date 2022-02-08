@@ -20,6 +20,11 @@ class DB {
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function execute($query) {
+        $stmt = $this->db->prepare($query);
+        $stmt->execute();
+    }
+
     public function select_all($tableName, $columns = array()){
         $strCol = "";
         foreach($columns as $colName) {
@@ -69,7 +74,9 @@ class DB {
         $stmt = $this->db->prepare($query);
         $stmt->execute();
         $result = $stmt->get_result();
-        return $result->fetch_all(MYSQLI_ASSOC);
+        if ($result){
+            return $result->fetch_all(MYSQLI_ASSOC);
+        }
     }
     
     public function update_one($tableName, $columns = array(), $id) {

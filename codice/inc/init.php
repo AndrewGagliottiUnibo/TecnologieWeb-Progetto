@@ -7,9 +7,10 @@
 // Setup database
     require_once ROOT_PATH . "/codice/db/db_manager.php";
     require_once ROOT_PATH . "/codice/db/ProductManager.php";
+    require_once ROOT_PATH . "/codice/db/CartManager.php";
 
 // Cart
-    require_once ROOT_PATH . "/codice/db/CartManager.php";
+    
     session_start();
     
 ?>
