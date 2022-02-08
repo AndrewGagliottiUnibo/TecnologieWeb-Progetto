@@ -1,4 +1,4 @@
-<h1>Sezione di accesso all'account personale</h1>
+<h1>Registrazione</h1>
     <section id="accessPoint">
         <form>
             <fieldset><legend>Inserisci qui i tuoi dati personali per registrarti presso <a href="<?php echo ROOT_URL;?>public?page=homepage">Cacplus.inc</a></legend>
