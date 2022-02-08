@@ -320,6 +320,12 @@ span, em {
     font-weight: bold;
 }
 
+span#admin {
+    font-weight: bold;
+    text-decoration: underline;
+    color: var(--main-title-color);
+}
+
 @media screen and (min-width:768px) {
     /* NavBar */
     .bottom_nav {
