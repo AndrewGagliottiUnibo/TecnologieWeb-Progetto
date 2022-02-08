@@ -1,7 +1,7 @@
 <?php
 // Costanti globali
-    define("ROOT_URL", "http://localhost/" . "Progetto/codice/");
-    define("IMAGE_URL", "http://localhost/" . "Progetto/immagini/");
+    define("ROOT_URL", "http://localhost/" . "TecnologieWeb-Progetto/codice/");
+    define("IMAGE_URL", "http://localhost/" . "TecnologieWeb-Progetto/immagini/");
     define("ROOT_PATH", dirname(__FILE__, 3));
     
 // Setup database
