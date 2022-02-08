@@ -320,7 +320,7 @@ span, em {
     font-weight: bold;
 }
 
-span#admin {
+span#important {
     font-weight: bold;
     text-decoration: underline;
     color: var(--main-title-color);

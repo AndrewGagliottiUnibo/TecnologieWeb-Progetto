@@ -25,6 +25,6 @@
     </article>
     <article id="contatti">
         <h2>Contatti:</h2>
-        <p>Tutte le comunicazioni in merito ad eventuali dubbi, perplessità, problemi di natura tecnica, recensioni o anche per soli complimenti avvengono via mail presso l'indirizzo email <span id="admin">admin@cacplusinc.com</span></p>
+        <p>Tutte le comunicazioni in merito ad eventuali dubbi, perplessità, problemi di natura tecnica, recensioni o anche per soli complimenti avvengono via mail presso l'indirizzo email <span id="important">admin@cacplusinc.com</span></p>
     </article>
 </section>
