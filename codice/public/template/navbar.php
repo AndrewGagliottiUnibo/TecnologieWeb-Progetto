@@ -8,7 +8,7 @@
             <a href="<?php echo ROOT_URL;?>public?page=login"><img
                     src="https://img.icons8.com/external-kmg-design-detailed-outline-kmg-design/64/000000/external-user-user-interface-kmg-design-detailed-outline-kmg-design-1.png" /></a>
 
-            <a href="<?php echo ROOT_URL;?>shop?page=cart"><img
+            <a href="<?php echo ROOT_URL;?>shop?page=cart">><img
                     src="https://img.icons8.com/external-icongeek26-outline-icongeek26/64/000000/external-cart-ecommerce-icongeek26-outline-icongeek26.png" />
             </a>
             <!-- Nuova pagina -->

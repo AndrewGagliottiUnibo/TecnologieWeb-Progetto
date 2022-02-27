@@ -36,6 +36,7 @@ class CartManager extends DbManager {
       , cart_item.quantity AS quantity
       , products.price * cart_item.quantity AS total_price
       , products.id as id
+      , products.image as image
     FROM
       cart_item 
       INNER JOIN products
@@ -57,10 +58,15 @@ class CartManager extends DbManager {
 
     if ($quantity > 0) {
       $this->db->execute("UPDATE cart_item SET quantity = $quantity WHERE cart_id = $cartId AND product_id = $productId");
-    } else {
-      $cartItemMgr = new CartItemManager();
-      $cartItemMgr->delete($cartItemId);
     }
+  }
+
+  public function deleteFromCart($productId, $cartId) {
+    $result = $this->db->query("SELECT id FROM cart_item WHERE cart_id = $cartId AND product_id = $productId");
+    $cartItemId = $result[0]['id'];
+    
+    $cartItemMgr = new CartItemManager();
+    $cartItemMgr->delete($cartItemId);
   }
 
   public function addToCart($productId, $cartId){

@@ -14,7 +14,7 @@
     <article id="cookiePolicy">
         <h2>Cookie policy:</h2>
             <h3>Cosa sono i cookie:</h3>
-                <p>Il sito utilizza cookie. Come chiarito dal Garante Privacy nel proprio <a href="https://www.garanteprivacy.it/">sito</a>, i cookie sono informazioni memorizzate dal tuo browser sul tuo dispositivo quando visiti un sito web o utilizzi un social network con il tuo pc, smartphone o tablet.</p><br/>
+                <p>Il sito utilizza cookie. Come chiarito dal Garante Privacy nel proprio <a href="https://www.garanteprivacy.it/">sito</a>, i cookie sono informazioni immesse sul tuo browser quando visiti un sito web o utilizzi un social network con il tuo pc, smartphone o tablet.</p><br/>
                 <p>Ogni cookie contiene diversi dati come, ad esempio, il nome del server da cui proviene, un identificatore numerico, ecc..</p>
                 <p>I cookie possono rimanere nel sistema per la durata di una sessione (cioè fino a che si chiude il browser utilizzato per la navigazione sul web) o per lunghi periodi e possono contenere un codice identificativo univoco. Alcuni cookie sono usati per eseguire autenticazioni informatiche, monitoraggio di sessioni e memorizzazione di informazioni specifiche sugli utenti che accedono ad una pagina web.</p><br/>
                 <p>Questi cookie, cosiddetti <span>tecnici</span>, sono spesso utili, perché possono rendere più veloce e rapida la navigazione e fruizione del web, perché ad esempio intervengono a facilitare alcune procedure quando fai acquisti online, quando ti autentichi ad aree ad accesso riservato o quando un sito web riconosce in automatico la lingua che utilizzi di solito.

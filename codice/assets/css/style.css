@@ -339,6 +339,37 @@ form input:not([type="submit"]) {
 form input[type="submit"] {
     border-width: 1px;
 }
+/* Cart */
+
+.shopping-cart {
+    padding: 2% 0%;
+    border: 2px solid;
+    border-radius: 0.5rem;
+    border-color: #0D2C05;
+    border-style: solid;
+    width: 80%;
+    margin: 0% auto;
+    
+}
+
+.products > .item-cart {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-cart > .top,.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: space-between;
+}
+
+.top > img {
+    min-width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
 
 @media screen and (min-width:768px) {
     /* NavBar */

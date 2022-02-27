@@ -2,8 +2,8 @@
     <section id="accessPoint">
         <form>
             <fieldset><legend>Inserisci qui i tuoi dati personali</legend>
-            <label for="email">Email: <input type="email" name="email"></label><br/>
-            <label for="email">Password: <input type="password" name="email"></label><br/>
+            <label for="email">Email:<input type="email" name="email"></label><br/>
+            <label for="email">Password:<input type="password" name="email"></label><br/>
             <input type="submit" value="Accedi">
         </fieldset>
         </form>
