@@ -1,5 +1,5 @@
 <header>
-    <?php include "./template/banner.php" ?>
+    <?php include ROOT_PATH . "/codice/template/banner.php";?>
 </header>
 
 <?php
@@ -13,11 +13,13 @@
     <div class="cards">
         <ul>
             <?php foreach($products as $product) : ?>
-                
+
             <li class="card">
                 <div class="img"><img src="<?php echo IMAGE_URL . $product->image . ".png"?>" alt=""></div>
                 <div class="text">
-                    <h4><a href="<?php echo ROOT_URL."shop/?page=product&id=".$product->id ?>"><?php echo $product->name ?></a></h4>
+                    <h4><a
+                            href="<?php echo ROOT_URL."shop/?page=product&id=".$product->id ?>"><?php echo $product->name ?></a>
+                    </h4>
                     <p class="price">&euro;<?php echo $product->price ?></p>
                 </div>
             </li>

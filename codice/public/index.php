@@ -15,11 +15,11 @@ $page = isset($_GET["page"]) ? $_GET["page"] : "homepage";
 </head>
 
 <body>
-    <?php include ROOT_PATH . "/codice/public/template/navbar.php";?>
+    <?php include ROOT_PATH . "/codice/template/navbar.php";?>
     <main>
         <?php include ROOT_PATH . "/codice/public/pages/" . $page . ".php";?>
     </main>
-    <?php include ROOT_PATH . "/codice/public/template/footer.php";?>
+    <?php include ROOT_PATH . "/codice/template/footer.php";?>
 </body>
 
 <script type="text/javascript" src="../assets/script/navbar.js"></script>
