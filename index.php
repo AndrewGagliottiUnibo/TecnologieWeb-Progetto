@@ -1,4 +1,4 @@
 <?php 
-    header("Location: codice/public");
+    header("Location: sito/public");
     exit;
 ?>
