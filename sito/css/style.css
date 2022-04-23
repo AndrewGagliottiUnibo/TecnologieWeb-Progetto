@@ -106,8 +106,6 @@ nav > ul{
     color: black;
 }
 
-
-
 .bottom_nav a:hover,
 .bottom_nav a:hover *,
 .top_nav a:hover * {
@@ -116,7 +114,7 @@ nav > ul{
 
 
 /* Header */
-header {
+header, aside#pageFiller {
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -325,8 +323,7 @@ footer ul li {
     padding-top: 0.75rem;
 }
 
-
-/* About us */
+/* About us, Login e Registrazione */
 h1 {
     font-size: xx-large;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -368,7 +365,7 @@ span, em {
 span#important {
     font-weight: bold;
     text-decoration: underline;
-    color: var(--main-title-color);
+    color: #6e1600;
 }
 
 /* Login and registration */
