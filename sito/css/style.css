@@ -177,7 +177,8 @@ footer ul li {
 .evidenza>h3,
 .catalogo>h3 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: x-large;
+    color: var(--main-title-color);
+    font-size: xx-large;
 }
 
 .evidenza>*,
@@ -215,7 +216,6 @@ footer ul li {
     margin-bottom: 0.5%;
     background-color: #F9FCF4;
 }
-
 
 /* Card */
 .cards {
@@ -273,6 +273,7 @@ footer ul li {
     text-decoration: solid;
     font-style: normal;
     text-align: right;
+    font-size: x-large;
 }
 
 .card .img {
