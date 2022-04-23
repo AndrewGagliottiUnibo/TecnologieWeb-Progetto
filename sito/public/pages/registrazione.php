@@ -1,11 +1,10 @@
 <h1>Registrazione</h1>
     <section id="accessPoint">
         <form>
-            <fieldset><legend>Inserisci qui i tuoi dati personali per registrarti presso <a href="<?php echo ROOT_URL;?>public?page=homepage">Cacplus.inc</a></legend>
+            <h2>Inserisci qui i tuoi dati personali per registrarti presso <a href="<?php echo ROOT_URL;?>public?page=homepage">Cacplus.inc</a></h2>
             <label for="email">Email:<input type="email" name="email"></label><br/>
             <label for="email">Password:<input type="password" name="email"></label><br/>
             <input type="submit" value="Registrati">
-        </fieldset>
         </form>
     </section>
     <section id="about">

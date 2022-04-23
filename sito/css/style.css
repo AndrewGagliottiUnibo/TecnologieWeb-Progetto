@@ -369,7 +369,7 @@ span#important {
 }
 
 /* Login and registration */
-form label {
+/* form label {
     display: inline-block;
     width: 50%;
     cursor: pointer;
@@ -380,6 +380,18 @@ form input:not([type="submit"]) {
 }
 form input[type="submit"] {
     border-width: 1px;
+} */
+section#accessPoint {
+    margin-left: 10%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: var(--main-theme-color);
+    width: 400px;
+    border-radius: 10px;
+}
+section#accesspoint > h2 {
+    text-align: center;
+    padding: 0, 0, 20px, 0;
+    border-bottom: 1px solid var(--main-theme-color);
 }
 
 /* Cart */

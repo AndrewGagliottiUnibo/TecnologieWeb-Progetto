@@ -1,11 +1,10 @@
 <h1>Sezione di accesso all'account personale</h1>
     <section id="accessPoint">
         <form>
-            <fieldset><legend>Inserisci qui i tuoi dati personali</legend>
+            <h2>Inserisci qui i tuoi dati personali</h2>
             <label for="email">Email:<input type="email" name="email"></label><br/>
             <label for="email">Password:<input type="password" name="email"></label><br/>
             <input type="submit" value="Accedi">
-        </fieldset>
         </form>
     </section>
     <section id="about">
