@@ -329,6 +329,7 @@ h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: var(--main-title-color);
     padding-left: 3%;
+    padding-bottom: 2%;
 }
 
 article {
@@ -369,29 +370,36 @@ span#important {
 }
 
 /* Login and registration */
-/* form label {
+section#accessPoint {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    padding: 0 10% 5px;
+}
+
+section#accesspoint > h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+}
+
+section#accessPoint form label {
     display: inline-block;
     width: 50%;
-    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+    color: var(--main-title-color);
+    background-color: var(--main-theme-color);
+    background-size: contain;
 }
-form input:not([type="submit"]) {
-    width: 50%;
+section#accessPoint form input:not([type="submit"]) {
+    width: 60%;
     box-sizing: border-box;
 }
-form input[type="submit"] {
+section#accessPoint form input[type="submit"] {
     border-width: 1px;
-} */
-section#accessPoint {
-    margin-left: 10%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background: var(--main-theme-color);
-    width: 400px;
-    border-radius: 10px;
-}
-section#accesspoint > h2 {
-    text-align: center;
-    padding: 0, 0, 20px, 0;
-    border-bottom: 1px solid var(--main-theme-color);
+    width: 60%;
+    cursor: pointer;
 }
 
 /* Cart */

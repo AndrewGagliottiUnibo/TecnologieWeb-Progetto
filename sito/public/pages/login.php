@@ -1,15 +1,21 @@
 <h1>Sezione di accesso all'account personale</h1>
     <section id="accessPoint">
         <form>
-            <h2>Inserisci qui i tuoi dati personali</h2>
-            <label for="email">Email:<input type="email" name="email"></label><br/>
-            <label for="email">Password:<input type="password" name="email"></label><br/>
+            <div id="container">
+                <h2>Inserisci qui i tuoi dati personali</h2>
+            </div>
+            <div id="email">
+                <label for="email">Email: <input type="email" name="email"></label>
+            </div>
+            <div id="input">
+                <label for="email">Password: <input type="password" name="email"></label>
+            </div>
             <input type="submit" value="Accedi">
         </form>
     </section>
     <section id="about">
         <article id="registration">
-            <h2>Non sei ancora registrato? Registra ora senza costi aggiuntivi!</h2>
+            <h2>Non sei ancora registrato? Registrati ora senza costi aggiuntivi!</h2>
                 <a href="<?php echo ROOT_URL;?>public?page=registrazione">Registrazione</a>
         </article>
         <article id="trattamento">

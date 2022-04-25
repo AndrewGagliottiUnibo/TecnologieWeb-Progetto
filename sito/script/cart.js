@@ -48,8 +48,14 @@ function addToCartCLicked(event) {
     addItemToCart(title, price, imageSrc)
 }
 
+//Aggiunge effettivamente un elemento al carrello
 function addItemToCart(title, price, imageSrc) {
-    var cartRow = document.createElement()
+    var cartRow = document.createElement('div')
+    cartRow.classList.add('cart-row')
+    var cartItems = document.getElementById('item')[0]
+    var cartRowContents = /* codice html */
+    cartRow.innerHTML = cartRowContents
+    cartItems.append(cartRow)
 }
 
 //Rimozione elementi
