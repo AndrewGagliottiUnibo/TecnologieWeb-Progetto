@@ -12,6 +12,10 @@ class DB {
         }        
     }
 
+    public function getDb() {
+        return $this->db;
+    }
+
     public function query($query) {
         $stmt = $this->db->prepare($query);
         $stmt->execute();

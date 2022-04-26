@@ -1,6 +1,21 @@
+<script type="text/javascript" src="../script/sha512.js"></script>
+<script type="text/javascript" src="../script/forms.js"></script>
+<?php
+if(isset($_GET['error'])) { 
+   echo 'Error Logging In!';
+}
+?>
+<form action="?page=process_login" method="post" name="login_form">
+   Email: <input type="text" name="email" /><br />
+   Password: <input type="password" name="p" id="password"/><br />
+   <input type="button" value="Login" onclick="formhash(this.form, this.form.password);" />
+</form>
+
+
+
 <h1>Sezione di accesso all'account personale</h1>
     <section id="accessPoint">
-        <form>
+        <form method="POST">
             <div id="container">
                 <h2>Inserisci qui i tuoi dati personali</h2>
             </div>
@@ -10,7 +25,7 @@
             <div id="input">
                 <label for="email">Password: <input type="password" name="email"></label>
             </div>
-            <input type="submit" value="Accedi">
+            <button type="submit" name="login">login</button>
         </form>
     </section>
     <section id="about">
