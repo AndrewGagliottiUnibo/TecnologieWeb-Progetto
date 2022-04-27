@@ -46,6 +46,7 @@ function login($email, $password, $mysqli)
 					// Password incorretta.
 					// Registriamo il tentativo fallito nel database.
 					echo 'password incorretta';
+					var_dump($password);
 					$now = time();
 					$mysqli->query("INSERT INTO login_attempts (user_id, time) VALUES ('$user_id', '$now')");
 					return false;
@@ -57,6 +58,39 @@ function login($email, $password, $mysqli)
 			return false;
 		}
 	}
+}
+
+function registration($username, $email, $password, $mysqli)
+{
+	// Usando statement sql 'prepared' non sarà possibile attuare un attacco di tipo SQL injection.
+	if ($stmt = $mysqli->prepare("SELECT id, username, password, salt FROM members WHERE username = ? OR email = ? LIMIT 1")) {
+		$stmt->bind_param("ss", $username, $email);
+		$stmt->execute(); // esegue la query appena creata.
+		$stmt->store_result();
+		$stmt->fetch();
+		if ($stmt->num_rows == 0) { // se l'utente non esiste lo inserisco nel database
+			// Recupero la password criptata dal form di inserimento.
+			var_dump($password);
+			// Crea una chiave casuale
+			$random_salt = hash('sha512', uniqid(mt_rand(1, mt_getrandmax()), true));
+			// Crea una password usando la chiave appena creata.
+			$password = hash('sha512', $password . $random_salt);
+			var_dump($password);
+			// Inserisci a questo punto il codice SQL per eseguire la INSERT nel tuo database
+			// Assicurati di usare statement SQL 'prepared'.
+			if ($insert_stmt = $mysqli->prepare("INSERT INTO members (username, email, password, salt) VALUES (?, ?, ?, ?)")) {
+				$insert_stmt->bind_param('ssss', $username, $email, $password, $random_salt);
+				// Esegui la query ottenuta.
+				$insert_stmt->execute();
+				return true;
+			}
+		} else {
+			// L'utente inserito non esiste.
+			echo 'utente già esistente';
+			return false;
+		}
+	}
+	return false;
 }
 
 function checkbrute($user_id, $mysqli)

@@ -1,5 +1,3 @@
-<script type="text/javascript" src="../script/sha512.js"></script>
-<script type="text/javascript" src="../script/forms.js"></script>
 <?php 
 require_once ROOT_PATH . "/sito/script/functions.php";
 require_once ROOT_PATH . "/sito/public/pages/process_login.php";
