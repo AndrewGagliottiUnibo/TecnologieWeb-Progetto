@@ -1,15 +1,27 @@
 <script type="text/javascript" src="../script/sha512.js"></script>
 <script type="text/javascript" src="../script/forms.js"></script>
-<?php
+<?php 
+require_once ROOT_PATH . "/sito/script/functions.php";
+require_once ROOT_PATH . "/sito/public/pages/process_login.php";
+
 if(isset($_GET['error'])) { 
    echo 'Error Logging In!';
 }
 ?>
-<form action="?page=process_login" method="post" name="login_form">
-   Email: <input type="text" name="email" /><br />
-   Password: <input type="password" name="p" id="password"/><br />
-   <input type="button" value="Login" onclick="formhash(this.form, this.form.password);" />
+<?php if(login_check($mysqli) == false) :?>
+    <form action="?page=process_login" method="post" name="login_form">
+    Email: <input type="text" name="email" /><br />
+    Password: <input type="password" name="p" id="password"/><br />
+    <input type="button" value="Login" onclick="formhash(this.form, this.form.password);" />
+    </form>
+
+
+<?php else: ?>
+<form action="?page=logout" method="post" name="logout_form">
+   <input type="submit" value="Logout"/>
 </form>
+
+<?php endif; ?>
 
 
 

@@ -108,13 +108,13 @@ class CartManager extends DbManager {
 
   // Private Methods
   private function _initializeClientIdFromSession(){
-    if (isset($_SESSION['client_id'])){
-      $this->clientId = $_SESSION['client_id'];
+    if (isset($_SESSION['user_id'])){
+      $this->clientId = $_SESSION['user_id'];
     } else {
       // generare una stringa casuale
       $str = $this->_random_string();
       // settare clientId in sessione con questa stringa
-      $_SESSION['client_id'] = $str;
+      $_SESSION['user_id'] = $str;
       $this->clientId = $str;
     }
   }

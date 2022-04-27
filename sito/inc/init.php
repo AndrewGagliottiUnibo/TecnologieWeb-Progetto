@@ -1,5 +1,4 @@
 <?php
-    session_start();
 // Costanti globali
     define("ROOT_URL", "http://localhost/" . "TecnologieWeb-Progetto/sito/");
     define("IMAGE_URL", "http://localhost/" . "TecnologieWeb-Progetto/immagini/");
@@ -9,6 +8,8 @@
     require_once ROOT_PATH . "/sito/db/db_manager.php";
     require_once ROOT_PATH . "/sito/db/ProductManager.php";
     require_once ROOT_PATH . "/sito/db/CartManager.php";
+    $db = new DB();
+    $mysqli = $db->getDb();
 // Cart
     
     
