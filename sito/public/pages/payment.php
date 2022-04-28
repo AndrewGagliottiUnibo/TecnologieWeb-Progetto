@@ -38,4 +38,10 @@ include_once ROOT_PATH . "/sito/script/purchase.js";
         
     </div>
 </section>
+<aside>
+    <h2>Informazioni sulla consegna</h2>
+        <div class=advise>
+            <p>La consegna avverrà al <span>Primo Piano</span> del complesso universitario in <span>Via dell'Università 50</span> di <span>Cesena</span>. Al momento della consegna siete pregati di fornire il vostro <span>Nome</span> e <span>Cognome</span> al corriere.</p>
+        </div>
+</aside>
 
