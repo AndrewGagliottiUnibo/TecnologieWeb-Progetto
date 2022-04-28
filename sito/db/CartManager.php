@@ -1,5 +1,4 @@
 <?php
-
 class CartManager extends DbManager {
 
   private $clientId;
@@ -110,17 +109,7 @@ class CartManager extends DbManager {
   private function _initializeClientIdFromSession(){
     if (isset($_SESSION['user_id'])){
       $this->clientId = $_SESSION['user_id'];
-    } else {
-      // generare una stringa casuale
-      $str = $this->_random_string();
-      // settare clientId in sessione con questa stringa
-      $_SESSION['user_id'] = $str;
-      $this->clientId = $str;
     }
-  }
-
-  private function _random_string(){
-    return substr(md5(mt_rand()), 0, 20);
   }
 
 }

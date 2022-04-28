@@ -140,18 +140,22 @@ function login_check($mysqli)
 					return true;
 				} else {
 					//  Login non eseguito
+					echo '1';
 					return false;
 				}
 			} else {
 				// Login non eseguito
+				echo '11';
 				return false;
 			}
 		} else {
 			// Login non eseguito
+			echo '111';
 			return false;
 		}
 	} else {
 		// Login non eseguito
+		echo '1111';
 		return false;
 	}
 }

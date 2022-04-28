@@ -8,6 +8,8 @@
     require_once ROOT_PATH . "/sito/db/db_manager.php";
     require_once ROOT_PATH . "/sito/db/ProductManager.php";
     require_once ROOT_PATH . "/sito/db/CartManager.php";
+    require_once ROOT_PATH . "/sito/script/functions.php";
+    sec_session_start();
     $db = new DB();
     $mysqli = $db->getDb();
 // Cart

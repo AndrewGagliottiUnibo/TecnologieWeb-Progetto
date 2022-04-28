@@ -1,7 +1,6 @@
 <?php
 include_once ROOT_PATH . "/sito/script/functions.php";
 require_once ROOT_PATH . "/sito/inc/init.php";
-sec_session_start(); // usiamo la nostra funzione per avviare una sessione php sicura
 //avviamo la procedura di registrazione
 if(isset($_POST['email'], $_POST['p'])) {
 $username = $_POST['username']; 
