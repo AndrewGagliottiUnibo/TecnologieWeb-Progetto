@@ -105,6 +105,16 @@ class CartManager extends DbManager {
     return $cartId;
   }
 
+  //must improve, nothing done
+  //need to cycle every cart item and then decrease stock value
+  public function purchaseDone($productId, $cartId) {
+    $result = $this->db->query("SELECT id FROM cart_item WHERE cart_id = $cartId AND product_id = $productId");
+    $cartItemId = $result[0]['id'];
+    
+    $cartItemMgr = new CartItemManager();
+    $cartItemMgr->delete($cartItemId);
+  }
+
 
   // Private Methods
   private function _initializeClientIdFromSession(){
