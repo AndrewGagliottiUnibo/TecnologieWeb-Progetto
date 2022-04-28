@@ -11,6 +11,9 @@ if (!isset($_GET['id'])) {
   exit;
 }
 
+//Var used for print alert to user
+$msg = "";
+
 if (isset($_POST['add_to_cart'])) {
   if (login_check($mysqli) == true) {
     $productId = htmlspecialchars($_GET['id']);
@@ -24,19 +27,24 @@ if (isset($_POST['add_to_cart'])) {
     $cm->addToCart($productId, $cartId);
 
     // stampato un messaggio per l'utente
-    echo "Aggiunto al carrello!";
+    $msg = "Aggiunto al carrello!";
     echo($_SESSION['user_id']);
   } else {
-    echo('non sei loggato');
+    $msg = 'Ricorda: attualmente non sei loggato. Accedi per poter aggiungere gli elementi al carrello';
   }
 }
 
 $id = htmlspecialchars($_GET['id']);
 $productsMgr = new ProductManager();
 $product = $productsMgr->get($id);
-echo($_SESSION['user_id']);
+//Print check
+//echo($_SESSION['user_id']);
 ?>
 
+<div class="alert">
+  <h3 class><?php echo $msg;
+        $msg = ""; ?></h3>
+</div>
 <section class="single_product">
   <div>
     <img src="<?php echo IMAGE_URL . $product->image . ".png" ?>" alt="">
