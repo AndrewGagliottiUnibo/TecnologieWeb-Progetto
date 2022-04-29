@@ -27,10 +27,10 @@ if (isset($_POST['add_to_cart'])) {
     $cm->addToCart($productId, $cartId);
 
     // stampato un messaggio per l'utente
-    $msg = "Aggiunto al carrello!";
+    $msg = "btn-add";
     echo($_SESSION['user_id']);
   } else {
-    $msg = 'Ricorda: attualmente non sei loggato. Accedi per poter aggiungere gli elementi al carrello';
+    $msg = 'btn-not-log';
   }
 }
 
@@ -41,10 +41,6 @@ $product = $productsMgr->get($id);
 //echo($_SESSION['user_id']);
 ?>
 
-<div class="alert">
-  <h3 class><?php echo $msg;
-        $msg = ""; ?></h3>
-</div>
 <section class="single_product">
   <div>
     <img src="<?php echo IMAGE_URL . $product->image . ".png" ?>" alt="">
@@ -53,7 +49,23 @@ $product = $productsMgr->get($id);
     <p><?php echo $product->description ?></p>
   </div>
   <form method="post">
-    <input class="btn-add" name="add_to_cart" type="submit" value="Aggiungi al carrello">
-    <input type="button" value="Delete">
+  <?php 
+    //Gestione dell'alert via js
+    if( $msg == "btn-add") {
+      $msg = "";
+      echo "
+      <input class=\"btn-add\" name=\"add_to_cart\" type=\"submit\" value=\"Aggiungi al carrello\">
+      <input class=\"delete\" type=\"button\" value=\"Delete\">
+  ";
+
+    } else {
+      $msg = "";
+      echo "
+      <input class=\"btn-not-log\" name=\"add_to_cart\" type=\"submit\" value=\"Aggiungi al carrello\">
+      <input class=\"btn-not-log\" name=\"remove_from_cart\" type=\"button\" value=\"Delete\">
+      ";
+    }
+    $msg = ""
+  ?>
   </form>
 </section>
