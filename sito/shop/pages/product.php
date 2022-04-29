@@ -51,7 +51,7 @@ $product = $productsMgr->get($id);
   <form method="post">
   <?php 
     //Gestione dell'alert via js
-    if( $msg == "btn-add") {
+    if($msg == "btn-add") {
       $msg = "";
       echo "
       <input class=\"btn-add\" name=\"add_to_cart\" type=\"submit\" value=\"Aggiungi al carrello\">
