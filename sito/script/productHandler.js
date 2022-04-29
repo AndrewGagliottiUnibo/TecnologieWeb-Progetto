@@ -7,11 +7,10 @@ if (document.readyState == 'loading') {
 
 //Loading file e listener per messaggio
 function ready() {
-   /*  document.getElementsByClassName('btn-not-log').addEventListener('click', purchaseFailed())
-    document.getElementsByClassName('btn-add').addEventListener('click', purchaseClicked())
-    document.getElementsByClassName('delete').addEventListener('click', purchaseDelete()) */
+    document.getElementsByClassName('btn-not-log')[0].addEventListener('click', purchaseFailed())
+    document.getElementsByClassName('btn-add')[0].addEventListener('click', purchaseClicked())
+    document.getElementsByClassName('delete')[0].addEventListener('click', purchaseDelete())
 }
-
 
 function purchaseFailed() {
     alert('Non hai effettuato il login. Accedi o Registrati ora per usufruire al meglio dell\'esperienza di Cacplus')
