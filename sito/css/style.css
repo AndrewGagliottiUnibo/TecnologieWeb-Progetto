@@ -547,6 +547,22 @@ section#accessPoint form input[type="submit"] {
     padding-top: 2%;
   }
 
+/* Single product view */
+section.single_product {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: space-between;
+}
+
+section.single_product img.product_photo {
+    height: 500px;
+    width: 500px;
+    margin: 2%;
+    margin-left: 5%;
+    background-color: white;
+}
+
 /* Cart */
 .shopping-cart {
     padding: 2% 0%;

@@ -43,7 +43,7 @@ $product = $productsMgr->get($id);
 
 <section class="single_product">
   <div>
-    <img src="<?php echo IMAGE_URL . $product->image . ".png" ?>" alt="">
+    <img class="product_photo" src="<?php echo IMAGE_URL . $product->image . ".png" ?>" alt="">
     <h3><?php echo $product->name ?></h3>
     <p><?php echo $product->price ?></p>
     <p><?php echo $product->description ?></p>
@@ -51,21 +51,20 @@ $product = $productsMgr->get($id);
   <form method="post">
   <?php 
     //Gestione dell'alert via js
-    if($msg == "btn-add") {
+    if($msg === "btn-add") {
       $msg = "";
       echo "
       <input class=\"btn-add\" name=\"add_to_cart\" type=\"submit\" value=\"Aggiungi al carrello\">
       <input class=\"delete\" type=\"button\" value=\"Delete\">
   ";
 
-    } else {
+    } else if($msg === "btn-not-log") {
       $msg = "";
       echo "
       <input class=\"btn-not-log\" name=\"add_to_cart\" type=\"submit\" value=\"Aggiungi al carrello\">
       <input class=\"btn-not-log\" name=\"remove_from_cart\" type=\"button\" value=\"Delete\">
       ";
     }
-    $msg = ""
   ?>
   </form>
 </section>
