@@ -1,88 +1,125 @@
-if(document.readyState == 'loading') {
+if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
 } else {
     ready()
 }
 
+//Funzione che si occupa di generare il carrello
 function ready() {
-    //Rimuovo elementi
-    var removeElement = document.getElementById("remove");
-
-    //Listener per rimozione
-    for(var i = 0; i < removeElement.length; i++) {
-        var button = removeElement[i];
+    //Cerco gli elementi che devono essere cancellati dal carrello
+    var removeCartItemButtons = document.getElementsByClassName('btn-danger')
+    
+    //Listener per la rimozione degli elementi dal carrello
+    for (var i = 0; i < removeCartItemButtons.length; i++) {
+        var button = removeCartItemButtons[i]
         button.addEventListener('click', removeCartItem)
     }
 
-    //Listener per l'input
-    var quantityInput = document.getElementById('quantity-input')
-    for(var i = 0; i < removeInput.length; i++) {
-        var input = quantityInput[i]
-        input.addEventListener('change', quantityChange)
+    //Listener per le quantità del carrello che variano
+    var quantityInputs = document.getElementsByClassName('cart-quantity-input')
+    for (var i = 0; i < quantityInputs.length; i++) {
+        var input = quantityInputs[i]
+        input.addEventListener('change', quantityChanged)
     }
 
-    //Apertura carrello
-    var addToCartButtons = document.getElementById('shop-item')
-    for(var i = 0; i < removeElement.length; i++) {
+    //Mostro carrello e elementi di interazione
+    var addToCartButtons = document.getElementsByClassName('shop-item-button')
+    for (var i = 0; i < addToCartButtons.length; i++) {
         var button = addToCartButtons[i]
-        button.addEventListener('click', addToCartCLicked)
+        button.addEventListener('click', addToCartClicked)
     }
+
+    document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 }
 
-//Controllo input quantità
-function quantityChange(event) {
-    var input = event.target
-    if (isNaN(input.value) || input.value <= 0) {
-        input.value = 1;
+//Alert che avvisa dell'avvenuto pagamento
+function purchaseClicked() {
+    alert('Thank you for your purchase')
+    
+    //Mi occupo della rimozione degli elementi del carrello -- da rivedere e mettere chiamate per query
+    var cartItems = document.getElementsByClassName('cart-items')[0]
+    while (cartItems.hasChildNodes()) {
+        cartItems.removeChild(cartItems.firstChild)
     }
     updateCartTotal()
 }
 
-//Aggiungo elementi al carrello
-function addToCartCLicked(event) {
-    var button = event.target
-    var shopItem = button.parentElement.parentElement
-    var title = shopItem.getElementById('shop-item-title')[0].innerText
-    var price = shopItem.getElementById('shop-item-price')[0].innerText
-    var imageSrc = shopItem.getElementById('shop-item-image')[0].src
-    addItemToCart(title, price, imageSrc)
+//Listener per rimozione elementi dal carrello
+function removeCartItem(event) {
+    var buttonClicked = event.target
+    buttonClicked.parentElement.parentElement.remove()
+    updateCartTotal()
 }
 
-//Aggiunge effettivamente un elemento al carrello
+//Controllo sull'input degli elementi del carrello
+function quantityChanged(event) {
+    var input = event.target
+    
+    //Se non è un numero o se < 0 allora si setta a 1
+    if (isNaN(input.value) || input.value <= 0) {
+        input.value = 1
+    }
+    updateCartTotal()
+}
+
+//Listener per aggiunta di item al carrello
+function addToCartClicked(event) {
+    var button = event.target
+    var shopItem = button.parentElement.parentElement
+    var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
+    var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
+    var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
+    addItemToCart(title, price, imageSrc)
+    updateCartTotal()
+}
+
+//Aggiunta effettiva degli item al carrello
 function addItemToCart(title, price, imageSrc) {
     var cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')
-    var cartItems = document.getElementById('item')[0]
-    var cartRowContents = /* codice html */
+    var cartItems = document.getElementsByClassName('cart-items')[0]
+    var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
+    for (var i = 0; i < cartItemNames.length; i++) {
+        if (cartItemNames[i].innerText == title) {
+            alert('This item is already added to the cart')
+            return
+        }
+    }
+    var cartRowContents = `
+        <div class="cart-item cart-column">
+            <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
+            <span class="cart-item-title">${title}</span>
+        </div>
+        <span class="cart-price cart-column">${price}</span>
+        <div class="cart-quantity cart-column">
+            <input class="cart-quantity-input" type="number" value="1">
+            <button class="btn btn-danger" type="button">REMOVE</button>
+        </div>`
     cartRow.innerHTML = cartRowContents
     cartItems.append(cartRow)
+    cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
+    cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
 }
 
-//Rimozione elementi
-function removeCartItem(event) {
-    var buttonClicked = event.target;
-    buttonClicked.parentElement.parentElement.remove();
-    updateCartTotal()
-}
-
-//update totale
+//Refresh contenuto del carrello
 function updateCartTotal() {
-    var cartItemContainer = document.getElementById('item')[0]
-    var cartRows = cartItemContainer.getElementById('item-row')
-    var total = 0;
+    var cartItemContainer = document.getElementsByClassName('cart-items')[0]
+    var cartRows = cartItemContainer.getElementsByClassName('cart-row')
+    var total = 0
 
-    for(var i = 0; i < cartRows.length; i++) {
-        var row = cartRows[i];
-        var priceElement = row.getElementById('price')[0]
-        var quantityElement = row.getElementById('quantity-input')[0]
-
-        //update prezzo
+    //Ciclo tutti gli elementi cercando eventuali variazioni
+    for (var i = 0; i < cartRows.length; i++) {
+        var cartRow = cartRows[i]
+        var priceElement = cartRow.getElementsByClassName('cart-price')[0]
+        var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
+        
+        //Effettivo update del prezzo
         var price = parseFloat(priceElement.innerText.replace('$', ''))
         var quantity = quantityElement.value
-        total += (price * quantity)
+        total = total + (price * quantity)
     }
 
-    //Sistemo i decimali e update totale prezzo
+    //Evito problemi di decimali con un arrotondamento
     total = Math.round(total * 100) / 100
-    document.getElementById('total-price')[0].innerText = total
+    document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
 }
