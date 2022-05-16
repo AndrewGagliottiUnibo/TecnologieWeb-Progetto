@@ -11,36 +11,27 @@ if (!isset($_GET['id'])) {
   exit;
 }
 
-//Var used for print alert to user
-$msg = "";
+$usrLogged = false;
+if (login_check($mysqli) == true) {
+  $usrLogged = true;
+  $productId = htmlspecialchars($_GET['id']);
+  // addToCart Logic
+  $cm = new CartManager();
+  $cartId = $cm->getCurrentCartId();
 
-if (isset($_POST['add_to_cart'])) {
-  if (login_check($mysqli) == true) {
-    $productId = htmlspecialchars($_GET['id']);
-    // addToCart Logic
-    $cm = new CartManager();
-    $cartId = $cm->getCurrentCartId();
+  echo $cartId;
 
-    echo $cartId;
+  // aggiumngi al carrello "cartId" il prodotto "productId"
+  $cm->addToCart($productId, $cartId);
 
-    // aggiumngi al carrello "cartId" il prodotto "productId"
-    $cm->addToCart($productId, $cartId);
-
-    // stampato un messaggio per l'utente
-    $msg = "btn-add";
-    echo($_SESSION['user_id']);
-  } else {
-    $msg = 'btn-not-log';
-  }
-} else {
-  $msg = 'btn-not-log';
+  // stampato un messaggio per l'utente
+  echo ($_SESSION['user_id']);
 }
 
 $id = htmlspecialchars($_GET['id']);
 $productsMgr = new ProductManager();
 $product = $productsMgr->get($id);
-//Print check
-//echo($_SESSION['user_id']);
+
 ?>
 
 <section class="single_product">
@@ -50,23 +41,12 @@ $product = $productsMgr->get($id);
     <p><?php echo $product->price ?></p>
     <p><?php echo $product->description ?></p>
   </div>
-  <?php 
-    //Gestione dell'alert via js
-    if($msg === "btn-add") {
-      echo "
-      <form method=\"post\" onSubmit=\"return purchaseClicked()\">
-        <input name=\"add_to_cart\" type=\"submit\" value=\"Aggiungi al carrello\">
-      </form>
-  ";
 
-    } else {
-      echo "
-      <form method=\"post\" onSubmit=\"return purchaseFailed()\">
-        <input name=\"add_to_cart\" type=\"submit\" value=\"Aggiungi al carrello\">
-      </form>
-      ";
-      $msg = "btn-add";
-    }
-  ?>
-  </form>
+  <?php if ($usrLogged) : ?>
+    <input id="btn-add" name="add_to_cart" type="button" value="Aggiungi al carrello">
+  <?php else : ?>
+    <input id="btn-not-log" name="add_to_cart" type="button" value="Aggiungi al carrello">
+  <?php endif; ?>
+
+
 </section>
