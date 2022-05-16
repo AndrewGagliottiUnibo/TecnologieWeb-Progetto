@@ -58,6 +58,7 @@ $cart_items = $cm->getCartItems($cartId);
 
                 <div>
                     <form method="post">
+                        <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($item['id']); ?>">
                         <input name="minus" type="submit" value="-">
                         <span><?php echo htmlspecialchars($item['quantity']);?></span>
                         <input name="plus" type="submit" value="+">
