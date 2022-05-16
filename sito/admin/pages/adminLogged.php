@@ -18,18 +18,18 @@ if (isset($_POST['remove_product'])) {
         <p class="operationDescription">
             Inserimento di prodotti nel catalogo
         </p>
-        <a name="add_new_product" class="gotoSpecific" href="#">Prosegui</a>
+        <a name="add_new_product" class="gotoSpecific" href=<?php echo ROOT_URL . "admin?page=add_product"?>>Prosegui</a>
                         
     <h3 class="adminOperation">Modifica prodotti</h3>
         <p class="operationDescription">
             Modifica di nome, prezzo, descrizione di ogni elemento del catalogo
         </p>
-        <a name="modify_product" class="gotoSpecific" href="#">Prosegui</a>
+        <a name="modify_product" class="gotoSpecific" href=<?php echo ROOT_URL . "admin?page=modify_product"?> >Prosegui</a>
     
     <h3 class="adminOperation">Rimuovi prodotti</h3>
         <p class="operationDescription">
             Rimozione di un elemento dal catalogo
         </p>
-        <a name="remove_product" class="gotoSpecific" href="#">Prosegui</a>
+        <a name="remove_product" class="gotoSpecific" href=<?php echo ROOT_URL . "admin?page=remove_product"?> >Prosegui</a>
 </div>
     
