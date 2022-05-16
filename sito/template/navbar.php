@@ -20,7 +20,7 @@
             </li>
             <?php if (isAdmin($mysqli)) : ?>
                 <li>
-                    <a href="<?php echo ROOT_URL; ?>admin?page=adminLogged">Admin</a>
+                    <a href="<?php echo ROOT_URL; ?>admin?page=admin_logged">Admin</a>
                 </li>
             <?php else : ?>
                 <li>
