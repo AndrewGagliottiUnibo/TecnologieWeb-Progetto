@@ -1,7 +1,7 @@
 <?php
 $page = isset($_GET["page"]) ? $_GET["page"] : "homepage";
 ?>
-<?php include "../inc/init.php"?>
+<?php include "../inc/init.php" ?>
 
 <!DOCTYPE html>
 <html lang="it">
@@ -16,13 +16,12 @@ $page = isset($_GET["page"]) ? $_GET["page"] : "homepage";
 </head>
 
 <body>
-    <?php include ROOT_PATH . "/sito/template/navbar.php";?>
+    <?php include ROOT_PATH . "/sito/template/navbar.php"; ?>
     <main>
-        <?php include ROOT_PATH . "/sito/public/pages/" . $page . ".php";?>
+        <?php include ROOT_PATH . "/sito/public/pages/" . $page . ".php"; ?>
     </main>
-    <?php include ROOT_PATH . "/sito/template/footer.php";?>
+    <?php include ROOT_PATH . "/sito/template/footer.php"; ?>
 </body>
-
 <script type="text/javascript" src="../script/navbar.js"></script>
 <script type="text/javascript" src="../script/card.js"></script>
 <script type="text/javascript" src="../script/sha512.js"></script>

@@ -118,6 +118,28 @@ function checkbrute($user_id, $mysqli)
 	}
 }
 
+function isAdmin($mysqli)
+{
+	if (login_check($mysqli)) {
+		$user_id = $_SESSION['user_id'];
+		$admin;
+		$stmt = $mysqli->prepare("SELECT admin FROM members WHERE id = ? LIMIT 1");
+		$stmt->bind_param('s', $user_id); // esegue il bind del parametro '$email'.
+		$stmt->execute(); // esegue la query appena creata.
+		$stmt->store_result();
+		$stmt->bind_result($admin); // recupera il risultato della query e lo memorizza nelle relative variabili.
+		$stmt->fetch();
+
+		if ($admin) {
+			//echo 'Success: You have been logged in as an Admin!';
+			return true;
+		} else {
+			return false;
+		}
+	}
+	return false;
+}
+
 function login_check($mysqli)
 {
 	// Verifica che tutte le variabili di sessione siano impostate correttamente
