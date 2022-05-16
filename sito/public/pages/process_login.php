@@ -18,7 +18,7 @@ if (isset($_POST['email'], $_POST['p'])) {
          //echo 'Success: You have been logged in as an Admin!';
          Header('Location:' . ROOT_URL . "admin?page=adminLogged");
       } else {
-         echo 'Success: You have been logged in!';
+         Header('Location:' . ROOT_URL . "public?page=login");
       }
    } else {
       // Login fallito
