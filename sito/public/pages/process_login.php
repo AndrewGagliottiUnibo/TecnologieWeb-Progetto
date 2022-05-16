@@ -5,16 +5,7 @@ if (isset($_POST['email'], $_POST['p'])) {
    $email = $_POST['email'];
    $password = $_POST['p']; // Recupero la password criptata.
    if (login($email, $password, $mysqli) == true) {
-      // Login eseguito, controlla se admin
-      $admin;
-      $stmt = $mysqli->prepare("SELECT admin FROM members WHERE email = ? LIMIT 1");
-      $stmt->bind_param('s', $email); // esegue il bind del parametro '$email'.
-      $stmt->execute(); // esegue la query appena creata.
-      $stmt->store_result();
-      $stmt->bind_result($admin); // recupera il risultato della query e lo memorizza nelle relative variabili.
-      $stmt->fetch();
-
-      if ($admin) {
+      if (isAdmin($mysqli)) {
          //echo 'Success: You have been logged in as an Admin!';
          Header('Location:' . ROOT_URL . "admin?page=adminLogged");
       } else {

@@ -46,7 +46,6 @@ function login($email, $password, $mysqli)
 					// Password incorretta.
 					// Registriamo il tentativo fallito nel database.
 					echo 'password incorretta';
-					var_dump($password);
 					$now = time();
 					$mysqli->query("INSERT INTO login_attempts (user_id, time) VALUES ('$user_id', '$now')");
 					return false;
@@ -70,12 +69,10 @@ function registration($username, $email, $password, $mysqli)
 		$stmt->fetch();
 		if ($stmt->num_rows == 0) { // se l'utente non esiste lo inserisco nel database
 			// Recupero la password criptata dal form di inserimento.
-			var_dump($password);
 			// Crea una chiave casuale
 			$random_salt = hash('sha512', uniqid(mt_rand(1, mt_getrandmax()), true));
 			// Crea una password usando la chiave appena creata.
 			$password = hash('sha512', $password . $random_salt);
-			var_dump($password);
 			// Inserisci a questo punto il codice SQL per eseguire la INSERT nel tuo database
 			// Assicurati di usare statement SQL 'prepared'.
 			if ($insert_stmt = $mysqli->prepare("INSERT INTO members (username, email, password, salt) VALUES (?, ?, ?, ?)")) {
@@ -118,6 +115,27 @@ function checkbrute($user_id, $mysqli)
 	}
 }
 
+function isAdmin($mysqli)
+{
+	if (login_check($mysqli)) {
+		$user_id = $_SESSION['user_id'];
+		$admin;
+		$stmt = $mysqli->prepare("SELECT admin FROM members WHERE id = ? LIMIT 1");
+		$stmt->bind_param('s', $user_id); // esegue il bind del parametro '$email'.
+		$stmt->execute(); // esegue la query appena creata.
+		$stmt->store_result();
+		$stmt->bind_result($admin); // recupera il risultato della query e lo memorizza nelle relative variabili.
+		$stmt->fetch();
+
+		if ($admin) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	return false;
+}
+
 function login_check($mysqli)
 {
 	// Verifica che tutte le variabili di sessione siano impostate correttamente
@@ -139,23 +157,15 @@ function login_check($mysqli)
 					// Login eseguito!!!!
 					return true;
 				} else {
-					//  Login non eseguito
-					//echo '1';
 					return false;
 				}
 			} else {
-				// Login non eseguito
-				//echo '11';
 				return false;
 			}
 		} else {
-			// Login non eseguito
-			//echo '111';
 			return false;
 		}
 	} else {
-		// Login non eseguito
-		//echo '1111';
 		return false;
 	}
 }

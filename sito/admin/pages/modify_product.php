@@ -32,7 +32,7 @@ $result = $stmt->get_result();
     </label><br>
 
     <label for="product_description_field">Descrizione
-        <input id="product_description_field" type="text" name="description" required>
+        <textarea rows="5" cols="33" id="product_description_field" name="description"></textarea>
     </label><br>
 
     <input type="submit" value="Aggiungi il prodotto">

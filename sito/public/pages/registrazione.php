@@ -1,19 +1,19 @@
-<?php 
+<?php
 require_once ROOT_PATH . "/sito/script/functions.php";
 ?>
 <h1>Registrazione</h1>
 <section id="accessPoint">
     <form action="?page=process_registration" method="post" name="registration_form">
-        Username: <input type="text" name="username" /><br />
-        Email: <input type="text" name="email" /><br />
-        Password: <input type="password" name="p" id="password" /><br />
-        <input type="submit" value="Registration" onclick="formhash(this.form, this.form.password)" />
-    </form>
-    <form>
-        <h2>Inserisci qui i tuoi dati personali per registrarti presso <a href="<?php echo ROOT_URL; ?>public?page=homepage">Cacplus.inc</a></h2>
-        <label for="email">Email:<input type="email" name="email"></label><br />
-        <label for="email">Password:<input type="password" name="email"></label><br />
-        <input type="submit" value="Registrati">
+        <label for="registration_username">Username
+            <input id="registration_username" type="text" name="username" />
+        </label><br />
+        <label for="registration_email">E-mail
+            <input id="registration_email" type="text" name="email" />
+        </label><br />
+        <label for="registration_password">Password
+            <input id="registration_password" type="password" name="p" id="password" />
+        </label><br />
+        <input type="submit" value="Registrati" onclick="formhash(this.form, this.form.registration_password)" />
     </form>
 </section>
 <section id="about">
