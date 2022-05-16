@@ -7,7 +7,7 @@ if (isset($_POST['email'], $_POST['p'])) {
    if (login($email, $password, $mysqli) == true) {
       if (isAdmin($mysqli)) {
          //echo 'Success: You have been logged in as an Admin!';
-         Header('Location:' . ROOT_URL . "admin?page=adminLogged");
+         Header('Location:' . ROOT_URL . "admin?page=admin_logged");
       } else {
          Header('Location:' . ROOT_URL . "public?page=login");
       }

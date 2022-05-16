@@ -10,6 +10,10 @@ if (isset($_POST['modify_product'])) {
 if (isset($_POST['remove_product'])) {
     header("location:" . ROOT_URL . "admin?page=remove_product");
 }
+
+if (isset($_POST['update-data'])) {
+    header("location:" . ROOT_URL . "admin?page=modify_data");
+}
 ?>
 
 <h2 class="adminWelcome">Bentornato!</h2>
@@ -31,5 +35,11 @@ if (isset($_POST['remove_product'])) {
             Rimozione di un elemento dal catalogo
         </p>
         <a name="remove_product" class="gotoSpecific" href=<?php echo ROOT_URL . "admin?page=remove_product"?> >Prosegui</a>
+
+    <h3 class="adminOperation">Aggiorna le credenziali</h3>
+        <p class="operationDescription">
+            Aggiorna le tue e-mail e password
+        </p>
+        <a name="update-data" class="gotoSpecific" href=<?php echo ROOT_URL . "admin?page=modify_data"?> >Prosegui</a>
 </div>
     
