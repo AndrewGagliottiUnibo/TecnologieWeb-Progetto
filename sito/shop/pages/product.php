@@ -36,7 +36,7 @@ $product = $productsMgr->get($id);
 
 <section class="single_product">
   <div>
-    <img class="product_photo" src="<?php echo IMAGE_URL . $product->image . ".png" ?>" alt="">
+    <img class="product_photo" src="<?php echo IMAGE_URL . $product->image ?>" alt="">
     <h3><?php echo $product->name ?></h3>
     <p><?php echo $product->price ?></p>
     <p><?php echo $product->description ?></p>
