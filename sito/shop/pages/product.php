@@ -12,7 +12,7 @@ if (!isset($_GET['id'])) {
 }
 
 //Var used for print alert to user
-$msg = "";
+$msg = "btn-add";
 
 if (isset($_POST['add_to_cart'])) {
   if (login_check($mysqli) == true) {
@@ -32,6 +32,8 @@ if (isset($_POST['add_to_cart'])) {
   } else {
     $msg = 'btn-not-log';
   }
+} else {
+  $msg = 'btn-not-log';
 }
 
 $id = htmlspecialchars($_GET['id']);
@@ -52,18 +54,17 @@ $product = $productsMgr->get($id);
   <?php 
     //Gestione dell'alert via js
     if($msg === "btn-add") {
-      $msg = "";
       echo "
       <input class=\"btn-add\" name=\"add_to_cart\" type=\"submit\" value=\"Aggiungi al carrello\">
       <input class=\"delete\" type=\"button\" value=\"Delete\">
   ";
 
     } else if($msg === "btn-not-log") {
-      $msg = "";
       echo "
       <input class=\"btn-not-log\" name=\"add_to_cart\" type=\"submit\" value=\"Aggiungi al carrello\">
       <input class=\"btn-not-log\" name=\"remove_from_cart\" type=\"button\" value=\"Delete\">
       ";
+      $msg = "btn-add";
     }
   ?>
   </form>
