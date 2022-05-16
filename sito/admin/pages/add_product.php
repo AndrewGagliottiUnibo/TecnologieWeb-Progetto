@@ -1,7 +1,21 @@
+<h1>Aggiungi un prodotto</h1>
+
 <form action="?page=process_add_product" method="post" enctype="multipart/form-data">
-    Nome: <input type="text" name="name" placeholder="Nome del prodotto"><br>
-    Prezzo: <input type="number" min="0" step="0.01" name="price" placeholder="0.00"><br>
-    Immagine: <input type="file" accept="image/*" name="image"><br>
-    Descrizione: <input type="text" name="description" placeholder="Aggiungi una descrizione"><br>
-    <input type="submit">
+    <label for="product_name_field">Nome
+        <input id="product_name_field" type="text" name="name" required>
+    </label><br>
+
+    <label for="product_price_field">Prezzo
+        <input id="product_price_field" type="number" min="0" step="0.01" name="price" required>
+    </label><br>
+
+    <label for="product_image_field">Immagine
+        <input id="product_image_field" type="file" accept="image/*" name="image" required>
+    </label><br>
+
+    <label for="product_description_field">Descrizione
+        <input id="product_description_field" type="text" name="description" required>
+    </label><br>
+
+    <input type="submit" value="Aggiungi il prodotto">
 </form>

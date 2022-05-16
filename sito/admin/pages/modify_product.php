@@ -8,18 +8,32 @@ $result = $stmt->get_result();
 ?>
 
 
+<h1>Modifica un prodotto</h1>
 
+<form action="?page=process_modify_product" method="post" enctype="multipart/form-data">
+    <label for="name_products">Seleziona il prodotto
+        <select name="selected_product_name" id="name_products">
+            <?php while ($row = mysqli_fetch_array($result)) { ?>
+                <option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?></option>
+            <?php } ?>
+        </select>
+    </label><br>
 
-<form action="?page=process_modify_product" method="post">
-    <label for="name_products">Product Name</label>
-    <select name="selected_product_name" id="name_products">
-        <?php while ($row = mysqli_fetch_array($result)) { ?>
-            <option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?></option>
-        <?php } ?>
-    </select>
-    Nome: <input type="text" name="name"><br>
-    Prezzo: <input type="number" step="0.01" name="price"><br>
-    Immagine: <input type="text" name="image"><br>
-    Descrizione: <input type="text" name="description"><br>
-    <input type="submit">
+    <label for="product_name_field">Nome
+        <input id="product_name_field" type="text" name="name" required>
+    </label><br>
+
+    <label for="product_price_field">Prezzo
+        <input id="product_price_field" type="number" min="0" step="0.01" name="price" required>
+    </label><br>
+
+    <label for="product_image_field">Immagine
+        <input id="product_image_field" type="file" accept="image/*" name="image" required>
+    </label><br>
+
+    <label for="product_description_field">Descrizione
+        <input id="product_description_field" type="text" name="description" required>
+    </label><br>
+
+    <input type="submit" value="Aggiungi il prodotto">
 </form>
