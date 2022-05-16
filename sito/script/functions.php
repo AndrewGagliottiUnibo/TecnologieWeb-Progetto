@@ -46,7 +46,6 @@ function login($email, $password, $mysqli)
 					// Password incorretta.
 					// Registriamo il tentativo fallito nel database.
 					echo 'password incorretta';
-					var_dump($password);
 					$now = time();
 					$mysqli->query("INSERT INTO login_attempts (user_id, time) VALUES ('$user_id', '$now')");
 					return false;
@@ -70,12 +69,10 @@ function registration($username, $email, $password, $mysqli)
 		$stmt->fetch();
 		if ($stmt->num_rows == 0) { // se l'utente non esiste lo inserisco nel database
 			// Recupero la password criptata dal form di inserimento.
-			var_dump($password);
 			// Crea una chiave casuale
 			$random_salt = hash('sha512', uniqid(mt_rand(1, mt_getrandmax()), true));
 			// Crea una password usando la chiave appena creata.
 			$password = hash('sha512', $password . $random_salt);
-			var_dump($password);
 			// Inserisci a questo punto il codice SQL per eseguire la INSERT nel tuo database
 			// Assicurati di usare statement SQL 'prepared'.
 			if ($insert_stmt = $mysqli->prepare("INSERT INTO members (username, email, password, salt) VALUES (?, ?, ?, ?)")) {
@@ -131,7 +128,6 @@ function isAdmin($mysqli)
 		$stmt->fetch();
 
 		if ($admin) {
-			//echo 'Success: You have been logged in as an Admin!';
 			return true;
 		} else {
 			return false;
@@ -161,23 +157,15 @@ function login_check($mysqli)
 					// Login eseguito!!!!
 					return true;
 				} else {
-					//  Login non eseguito
-					//echo '1';
 					return false;
 				}
 			} else {
-				// Login non eseguito
-				//echo '11';
 				return false;
 			}
 		} else {
-			// Login non eseguito
-			//echo '111';
 			return false;
 		}
 	} else {
-		// Login non eseguito
-		//echo '1111';
 		return false;
 	}
 }

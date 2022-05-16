@@ -10,4 +10,4 @@ function formhash(form, password) {
     password.value = "";
     // Come ultimo passaggio, esegui il 'submit' del form.
     form.submit();
- }
+}
