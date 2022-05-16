@@ -7,9 +7,8 @@ if (document.readyState == 'loading') {
 
 //Loading file e listener per messaggio
 function ready() {
-    document.getElementsByClassName('btn-not-log')[0].addEventListener('click', purchaseFailed())
-    document.getElementsByClassName('btn-add')[0].addEventListener('click', purchaseClicked())
-    document.getElementsByClassName('delete')[0].addEventListener('click', purchaseDelete())
+    //document.getElementsByClassName('btn-add')[0].addEventListener('click', purchaseClicked())
+    console.log(document.getElementsByClassName('btn-add')[0])
 }
 
 function purchaseFailed() {

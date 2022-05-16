@@ -56,15 +56,12 @@ $product = $productsMgr->get($id);
     if($msg === "btn-add") {
       echo "
       <input class=\"btn-add\" name=\"add_to_cart\" type=\"submit\" value=\"Aggiungi al carrello\">
-      <input class=\"delete\" type=\"button\" value=\"Delete\">
   ";
 
     } else if($msg === "btn-not-log") {
       echo "
       <input class=\"btn-not-log\" name=\"add_to_cart\" type=\"submit\" value=\"Aggiungi al carrello\">
-      <input class=\"btn-not-log\" name=\"remove_from_cart\" type=\"button\" value=\"Delete\">
       ";
-      $msg = "btn-add";
     }
   ?>
   </form>
