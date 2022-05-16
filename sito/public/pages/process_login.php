@@ -16,7 +16,7 @@ if (isset($_POST['email'], $_POST['p'])) {
 
       if ($admin) {
          //echo 'Success: You have been logged in as an Admin!';
-         Header('Location:' . ROOT_URL . "admin?page=homepage");
+         Header('Location:' . ROOT_URL . "admin?page=adminLogged");
       } else {
          echo 'Success: You have been logged in!';
       }
