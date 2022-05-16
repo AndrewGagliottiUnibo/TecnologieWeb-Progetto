@@ -14,7 +14,7 @@
     </label><br>
 
     <label for="product_description_field">Descrizione
-        <textarea id="story" name="story" rows="5" cols="33" id="product_description_field" name="description" required></textarea>
+        <textarea id="product_description_field" rows="5" cols="33" name="description"></textarea>
     </label><br>
 
     <input type="submit" value="Aggiungi il prodotto">
