@@ -11,12 +11,11 @@ $result = $stmt->get_result();
 
 
 <form action="?page=process_remove_product" method="post">
-    <label for="name_products">Seleziona il prodotto
-        <select name="selected_product_name" id="name_products">
-            <?php while ($row = mysqli_fetch_array($result)) { ?>
-                <option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?></option>
-            <?php } ?>
-        </select>
-    </label><br>
-    <input type="submit" value="Rimuovi Prodotto">
+    <label for="name_products">Seleziona il prodotto</label>
+    <select name="selected_product_name" id="name_products">
+        <?php while ($row = mysqli_fetch_array($result)) { ?>
+            <option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?></option>
+        <?php } ?>
+    </select>
+    <input class="commit_button" type="submit" value="Rimuovi">
 </form>

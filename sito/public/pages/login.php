@@ -10,21 +10,17 @@ if (isset($_GET['error'])) {
 <h1>Sezione di accesso all'account personale</h1>
 <?php if (login_check($mysqli) == false) : ?>
     <form id="login_form" action="?page=process_login" method="post">
-        <label for="login_email">E-mail
-            <input id="login_email" type="text" name="email" required />
-        </label><br>
-
-        <label for="login_password">Password
-            <input id="login_password" type="password" name="p" required />
-        </label><br>
-
-        <input type="button" value="Login" onclick="formhash(this.form, this.form.login_password);" />
+        <label for="login_email">E-mail</label>
+        <input id="login_email" type="text" name="email" required />
+        <label for="login_password">Password</label>
+        <input id="login_password" type="password" name="p" required />
+        <input class="commit_button" type="button" value="Login" onclick="formhash(this.form, this.form.login_password);" />
     </form>
 
 
 <?php else : ?>
-    <form action="?page=logout" method="post" name="logout_form">
-        <input type="submit" value="Logout" />
+    <form id="logout_form" action="?page=logout" method="post" name="logout_form">
+        <input class="commit_button" type="submit" value="Logout" />
     </form>
 
 <?php endif; ?>

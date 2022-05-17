@@ -31,5 +31,5 @@ $result = $stmt->get_result();
         <input id="product_price_field" type="password" name="confirm" required>
     </label><br>
 
-    <input type="submit" value="Aggiorna le credenziali">
+    <input class="commit_button" type="submit" value="Aggiorna le credenziali">
 </form>
