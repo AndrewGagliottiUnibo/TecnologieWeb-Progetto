@@ -251,7 +251,7 @@ footer ul li {
     flex-direction: column;
     position: relative;
     background-color: var(--main-theme-color);
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .card .text {
@@ -304,8 +304,7 @@ footer ul li {
 
 .card:focus-within,
 .card:hover {
-    margin-top: -10%;
-    margin-bottom: 10%;
+    transform: scale(1.03);
 }
 
 .card:focus-within a:focus {
@@ -333,6 +332,8 @@ h1 {
     padding: 2% 0%;
     display: flex;
     justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
 article {

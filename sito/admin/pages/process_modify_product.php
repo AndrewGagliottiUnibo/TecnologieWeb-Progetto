@@ -9,7 +9,7 @@ if (isset($_POST['name'], $_POST['price'],  $_FILES['image'],  $_POST['descripti
     $description = $_POST['description'];
     $selected_product_name = $_POST['selected_product_name'];
     //  Check if product already exist
-    if (isANewProduct($mysqli, $name)) {
+    if (!isANewProduct($mysqli, $name)) {
         echo "Product already exist";
         return;
     }

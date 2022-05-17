@@ -19,13 +19,8 @@ if (login_check($mysqli) == true) {
   $cm = new CartManager();
   $cartId = $cm->getCurrentCartId();
 
-  echo $cartId;
-
   // aggiumngi al carrello "cartId" il prodotto "productId"
   $cm->addToCart($productId, $cartId);
-
-  // stampato un messaggio per l'utente
-  echo ($_SESSION['user_id']);
 }
 
 $id = htmlspecialchars($_GET['id']);
