@@ -1,4 +1,4 @@
-<h1>About us</h1>
+<h1>Chi siamo</h1>
 <section id="about">
     <article>
         <h2>Chi siamo:</h2>

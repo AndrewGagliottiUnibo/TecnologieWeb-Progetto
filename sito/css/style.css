@@ -532,7 +532,6 @@ aside {
     border-color: #0D2C05;
     padding: 10px;
     margin: 2%;
-
 }
 
 aside>h2 {
@@ -548,19 +547,65 @@ aside>h2 {
 }
 
 /* Single product view */
-section.single_product {
+section .single_product {
     display: flex;
     align-items: center;
     justify-content: center;
-    align-content: space-between;
 }
 
-section.single_product img.product_photo {
+img.product_photo {
     height: 500px;
     width: 500px;
     margin: 2%;
     margin-left: 5%;
     background-color: white;
+}
+
+.product_info > h3 {
+    margin: 1%;
+    padding: 2%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xx-large;
+    font-weight: bold; 
+    color: var(--main-title-color);
+}
+
+p.price {
+    text-decoration: solid;
+    text-decoration: underline;
+    font-style: normal;
+    text-align: right;
+    font-size: xx-large;
+    color: black;
+    margin-bottom: 5%;
+}
+
+p.product_description {
+    margin: 2%;
+    padding: 4%;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: var(--main-title-color);
+    border-style: solid;
+    background-color: white;
+}
+
+input#btn-add, input#btn-not-log {
+    text-align: center;  
+    background-color: var(--main-theme-color);
+    color: var(--main-title-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+    border-style: solid;
+    border-color: var(--main-title-color);
+}
+
+input#btn-add:hover, input#btn-not-log:hover {
+    background-color: white;
+    color: #6e1600;
+    text-decoration: underline;
+
 }
 
 /* Cart */

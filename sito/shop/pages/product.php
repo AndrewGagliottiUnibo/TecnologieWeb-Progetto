@@ -23,9 +23,6 @@ if (login_check($mysqli) == true) {
 
   // aggiumngi al carrello "cartId" il prodotto "productId"
   $cm->addToCart($productId, $cartId);
-
-  // stampato un messaggio per l'utente
-  echo ($_SESSION['user_id']);
 }
 
 $id = htmlspecialchars($_GET['id']);
@@ -35,11 +32,11 @@ $product = $productsMgr->get($id);
 ?>
 
 <section class="single_product">
-  <div>
+  <div class="product_info">
     <img class="product_photo" src="<?php echo IMAGE_URL . $product->image ?>" alt="">
     <h3><?php echo $product->name ?></h3>
-    <p><?php echo $product->price ?></p>
-    <p><?php echo $product->description ?></p>
+    <p class="price"><?php echo $product->price ?> €</p>
+    <p class="product_description"><?php echo $product->description ?></p>
   </div>
 
   <?php if ($usrLogged) : ?>
