@@ -8,32 +8,32 @@ include_once ROOT_PATH . "/sito/script/purchase.js";
     </div>
 
 <h2>Sezione di pagamento</h2>
-    <div class="form">
+    <div class="compiation_form">
         <div class="space icon-relative">
-            <label class="label">Proprietario:</label>
-            <input type="text" class="input" placeholder="Nome Cognome">
+            <label for="proprietario" class="label_data">Proprietario:</label>
+            <input id="proprietario" type="text" class="input_data" placeholder="Nome Cognome">
             <i class="fas fa-user"></i>
         </div>
         <div class="space icon-relative">
-            <label class="label">Numero carta:</label>
-            <input type="text" class="input" data-mask="0000 0000 0000 0000" placeholder="Numero carta">
+            <label for="carta" class="label_data">Numero carta:</label>
+            <input id="carta" type="text" class="input_data" data-mask="0000 0000 0000 0000" placeholder="Numero carta">
             <i class="far fa-credit-card"></i>
         </div>
         <div class="input-grp space">
             <div class="input-item icon-relative">
-                <label class="label">Scadenza:</label>
-                <input type="text" name="expiry-data" class="input" data-mask="00 / 00"  placeholder="00 / 00">
+                <label for="scadenza" class="label_data">Scadenza:</label>
+                <input id="scadenza" type="text" name="expiry-data" class="input_data" data-mask="00 / 00"  placeholder="00 / 00">
                 <i class="far fa-calendar-alt"></i>
             </div>
             <div class="input-item icon-relative">
-                <label class="label">CVC:</label>
-                <input type="text" class="input" data-mask="000" placeholder="000">
+                <label for="cvc" class="label_data">CVC:</label>
+                <input id="cvc" type="text" class="input_data" data-mask="000" placeholder="000">
                 <i class="fas fa-lock"></i>
             </div>
         </div>
         
         <div class="btn">
-        Pay
+            <a class="pay" href="<?php echo ROOT_URL; ?>public?page=homepage">Pay</a>
         </div> 
         
     </div>

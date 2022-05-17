@@ -79,7 +79,7 @@ $cart_items = $cm->getCartItems($cartId);
 
     <section class="purchase_sec">
         <div class="purchase_container">
-                <a href=""></a>
+                <a href="<?php echo ROOT_URL; ?>public?page=payment">Checkout</a>
         </div>
     </section>
 

@@ -409,144 +409,6 @@ section#accessPoint form input[type="submit"] {
     cursor: pointer;
 }
 
-/* Payment */
-section.payment {
-    background: var(--main-theme-color);
-    max-width: 360px;
-    margin: 80px auto;
-    height: auto;
-    padding: 20px;
-    padding-top: 70px;
-    border-radius: 5px;
-    position: relative;
-}
-
-.payment h2 {
-    text-align: center;
-    letter-spacing: 2px;
-    margin-bottom: 40px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: xx-large;
-    color: var(--main-title-color);
-}
-
-.form .label {
-    display: block;
-    color: var(--main-title-color);
-    margin-bottom: 6px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: large;
-    font-weight: bold;
-}
-
-.input {
-    padding: 13px 0px 13px 25px;
-    width: 100%;
-    text-align: center;
-    border: 2px solid #dddddd;
-    border-radius: 5px;
-    letter-spacing: 1px;
-    word-spacing: 3px;
-    outline: none;
-    font-size: 16px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: small;
-    color: black;
-}
-
-.input-grp {
-    display: flex;
-    justify-content: space-between;
-}
-
-.input-item {
-    width: 40%;
-}
-
-.space {
-    margin-bottom: 20px;
-}
-
-.icon-relative {
-    position: relative;
-}
-
-.icon-relative .fas,
-.icon-relative .far {
-    position: absolute;
-    bottom: 12px;
-    left: 15px;
-    font-size: 20px;
-    color: #555555;
-}
-
-.btn {
-    margin-top: 40px;
-    background: var(--main-title-color);
-    padding: 12px;
-    text-align: center;
-    color: var(--main-hv-color);
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.payment-logo {
-    position: absolute;
-    top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 100px;
-    background: var(--main-hv-color);
-    border-radius: 50%;
-    box-shadow: 0 0 5px var(--main-title-color);
-    text-align: center;
-    line-height: 85px;
-}
-
-.payment-logo:before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 90px;
-    height: 90px;
-    background: var(--main-title-color);
-    border-radius: 50%;
-}
-
-.payment-logo p {
-    position: relative;
-    color: var(--main-hv-color);
-    font-family: 'Baloo Bhaijaan', cursive;
-    font-size: 58px;
-}
-
-aside {
-    display: block;
-    font-size: x-large;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border-style: solid;
-    border: 2px solid;
-    border-radius: 0.5rem;
-    background-color: white;
-    border-color: #0D2C05;
-    padding: 10px;
-    margin: 2%;
-}
-
-aside>h2 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: xx-large;
-    color: #6e1600;
-    text-align: center;
-}
-
-.advise {
-    text-align: center;
-    padding-top: 2%;
-}
-
 /* Single product view */
 section .single_product {
     display: flex;
@@ -631,20 +493,6 @@ input#btn-add, input#btn-not-log {
     min-width: 150px;
     height: 150px;
     object-fit: cover;
-}
-
-/* Payment */
-.input-grp {
-    flex-direction: column;
-}
-
-.input-item {
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.btn {
-    margin-top: 20px;
 }
 
 /* Hamburger Button */
@@ -843,6 +691,147 @@ form>div {
     background: var(--main-title-color);
     color: var(--main-hv-color);
 }
+
+
+/* Payment */
+section.payment {
+    background: var(--main-theme-color);
+    max-width: 360px;
+    margin: 80px auto;
+    height: auto;
+    padding: 20px;
+    padding-top: 70px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.payment h2 {
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xx-large;
+    color: var(--main-title-color);
+}
+.compiation_form .label_data {
+    display: block;
+    color: var(--main-title-color);
+    margin-bottom: 6px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
+
+.input_data {
+    padding: 13px 0px 13px 25px;
+    width: 100%;
+    text-align: center;
+    border: 2px solid #dddddd;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    outline: none;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    color: black;
+}
+
+.input-grp {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-item {
+    width: 40%;
+}
+
+.space {
+    margin-bottom: 30px;
+}
+
+.icon-relative {
+    position: relative;
+}
+
+.icon-relative .fas,
+.icon-relative .far {
+    position: absolute;
+    bottom: 12px;
+    left: 15px;
+    font-size: 20px;
+    color: #555555;
+}
+
+.btn, .pay {
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+    background: var(--main-title-color);
+    padding: 12px;
+    color: var(--main-hv-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.payment-logo {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background: var(--main-hv-color);
+    border-radius: 50%;
+    box-shadow: 0 0 5px var(--main-title-color);
+    text-align: center;
+    line-height: 85px;
+}
+
+.payment-logo:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 90px;
+    height: 90px;
+    background: var(--main-title-color);
+    border-radius: 50%;
+}
+
+.payment-logo p {
+    position: relative;
+    color: var(--main-hv-color);
+    font-family: 'Baloo Bhaijaan', cursive;
+    font-size: 58px;
+}
+
+aside {
+    display: block;
+    font-size: x-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-style: solid;
+    border: 2px solid;
+    border-radius: 0.5rem;
+    background-color: white;
+    border-color: #0D2C05;
+    padding: 10px;
+    margin: 2%;
+}
+
+aside>h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xx-large;
+    color: #6e1600;
+    text-align: center;
+}
+
+.advise {
+    text-align: center;
+    padding-top: 2%;
+}
+
 
 @media screen and (min-width:768px) {
 
