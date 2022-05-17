@@ -555,8 +555,8 @@ section .single_product {
 }
 
 img.product_photo {
-    height: 500px;
-    width: 500px;
+    height: 450px;
+    width: 450px;
     margin: 2%;
     margin-left: 5%;
     background-color: white;

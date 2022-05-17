@@ -40,6 +40,6 @@ if (isset($_POST['update-data'])) {
         <p class="operationDescription">
             Aggiorna le tue e-mail e password
         </p>
-        <a name="update-data" class="gotoSpecific" href=<?php echo ROOT_URL . "admin?page=modify_data"?> >Prosegui</a>
+        <a name="update-data" class="gotoSpecific" href=<?php echo ROOT_URL . "public?page=modify_data"?> >Prosegui</a>
 </div>
     

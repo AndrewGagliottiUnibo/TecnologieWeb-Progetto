@@ -11,3 +11,12 @@ function formhash(form, password) {
     // Come ultimo passaggio, esegui il 'submit' del form.
     form.submit();
 }
+
+var check = function() {
+    if (document.getElementById('password_field').value ==
+            document.getElementById('confirmation_field').value) {
+        document.getElementById('submit').disabled = false;
+    } else {
+        document.getElementById('submit').disabled = true;
+    }
+  }

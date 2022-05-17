@@ -2,25 +2,25 @@
 require_once ROOT_PATH . "/sito/inc/init.php";
 require_once ROOT_PATH . "/sito/script/functions.php";
 
-if (isset($_POST['email'], $_POST['password'],  $_POST['confirm'])) {
-    $email = $_POST['email'];
+if (isset($_POST['oldPassword'], $_POST['password'],  $_POST['confirm'])) {
+    $usrId = $_SESSION['user_id'];
+    $oldPassword = $_POST['oldPassword'];
     $password = $_POST['password'];
     $confirm = $_POST['confirm'];
-    //  Check if product already exist
-    if (isANewProduct($mysqli, $email)) {
-        echo "E-mail already exist";
-        return;
-    }
-    // Trying to upload image
-    if (!uploadNewProductImage($mysqli, $email, $password, $confirm)) {
-        echo "Modify product failed";
-        return;
-    }
-    // Modifying current product
-    if (!($stmt = $mysqli->prepare("UPDATE products SET email = ?, password = ?, image = ?, description = ? WHERE email = ?"))) {
-        return;
-    }
-    $stmt->bind_param('sssss', $email, $password, $confirm, $description, $selected_product_email);
+
+    //Passowrd selection
+    $stmt = $mysqli->prepare("SELECT password FROM members WHERE id = ?");
+    $stmt->bind_param('i', $usrId);
     $stmt->execute();
-    echo "Prodotto modificato con successo";
+    $check = $stmt->get_result();
+
+    // Check if product already exist
+    if ($check === $oldPassword) {
+        //if ($password === $confirm) {
+            $stmt = $mysqli->prepare("UPDATE members SET password = ?");
+            $stmt->bind_param('s', $password);
+            $stmt->execute();
+            echo('tutto ok');
+        //}
+    }
 }
