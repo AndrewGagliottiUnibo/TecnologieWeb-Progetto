@@ -77,6 +77,12 @@ $cart_items = $cm->getCartItems($cartId);
             <?php endforeach; ?>
         </ul>
 
+    <section class="purchase_sec">
+        <div class="purchase_container">
+                <a href=""></a>
+        </div>
+    </section>
+
     <?php else : ?>
         <h1>Nesun articolo nel carrello!</h1>
     <?php endif; ?>

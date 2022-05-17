@@ -12,5 +12,5 @@
     <input id="confirmation_field" type="password" name="confirm" onchange='check();' required>
     <span id='message'></span>
 
-    <input class="commit_button" type="submit" value="Aggiorna le credenziali" onclick="formModifyHhash(this.form, this.form.password_old, this.password_field);">
+    <input class="commit_button" type="submit" value="Aggiorna" onclick="formModifyHhash(this.form, this.form.password_old, this.password_field);">
 </form>
