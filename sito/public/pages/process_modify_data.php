@@ -12,13 +12,18 @@ if (isset($_POST['oldPassword'], $_POST['password'],  $_POST['confirm'])) {
     $stmt = $mysqli->prepare("SELECT password FROM members WHERE id = ?");
     $stmt->bind_param('i', $usrId);
     $stmt->execute();
-    $check = $stmt->get_result();
+    $result = $stmt->get_result();
+    $check =  mysqli_fetch_array($result)['password'];
 
+    var_dump($check);
+    var_dump($oldPassword);
+    var_dump($password);
     // Check if product already exist
     if ($check === $oldPassword) {
+        var_dump($check);
         //if ($password === $confirm) {
-            $stmt = $mysqli->prepare("UPDATE members SET password = ?");
-            $stmt->bind_param('s', $password);
+            $stmt = $mysqli->prepare("UPDATE members SET password = ? WHERE id = ?");
+            $stmt->bind_param('si', $password, $usrId);
             $stmt->execute();
             echo('tutto ok');
         //}

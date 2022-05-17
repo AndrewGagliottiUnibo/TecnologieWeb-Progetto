@@ -555,10 +555,11 @@ section .single_product {
 }
 
 img.product_photo {
-    height: 450px;
-    width: 450px;
+    
+    height: 480px;
+    width: 480px;
     margin: 2%;
-    margin-left: 5%;
+    padding: 3%;
     background-color: white;
 }
 
@@ -579,6 +580,7 @@ p.price {
     font-size: xx-large;
     color: black;
     margin-bottom: 5%;
+    margin-right: 4%;
 }
 
 p.product_description {
