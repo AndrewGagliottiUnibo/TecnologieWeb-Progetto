@@ -213,9 +213,8 @@ footer ul li {
 }
 
 .vai_catalogo a:hover {
-    margin-top: -0.5%;
-    margin-bottom: 0.5%;
-    background-color: #F9FCF4;
+    background: var(--main-title-color);
+    color: var(--main-hv-color);
 }
 
 /* Card */
@@ -247,7 +246,7 @@ footer ul li {
 .card {
     border: 2px solid;
     border-radius: 0.25rem;
-    border-color: #ACB59F;
+    border-color: var(--main-title-color);
     border-style: solid;
     display: flex;
     flex-direction: column;
@@ -332,8 +331,9 @@ h1 {
     font-size: xx-large;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: var(--main-title-color);
-    padding-left: 3%;
-    padding-bottom: 2%;
+    padding: 2% 0%;
+    display: flex;
+    justify-content: center;
 }
 
 article {
@@ -776,6 +776,15 @@ form {
     justify-content: center;
     align-content: center;
     background-color: #eff7e3;
+}
+
+form>div {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    margin-top: 4%;
+    align-content: center;
+    text-align: center;
 }
 
 #logout_form {

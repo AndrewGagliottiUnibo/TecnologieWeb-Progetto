@@ -9,7 +9,7 @@ require_once ROOT_PATH . "/sito/script/functions.php";
     <input id="registration_email" type="text" name="email" />
     <label for="registration_password">Password</label>
     <input id="registration_password" type="password" name="p" id="password" />
-    <input id="login_button" type="submit" value="Registrati" onclick="formhash(this.form, this.form.registration_password)" />
+    <input class="commit_button" type="submit" value="Registrati" onclick="formhash(this.form, this.form.registration_password)" />
 </form>
 <section id="about">
     <article id="trattamento">
