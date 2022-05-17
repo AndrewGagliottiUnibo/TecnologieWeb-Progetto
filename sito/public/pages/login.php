@@ -7,8 +7,9 @@ if (isset($_GET['error'])) {
 }
 ?>
 
-<h1>Sezione di accesso all'account personale</h1>
+
 <?php if (login_check($mysqli) == false) : ?>
+    <h1>Sezione di accesso al profilo personale</h1>
     <form id="login_form" action="?page=process_login" method="post">
         <label for="login_email">E-mail</label>
         <input id="login_email" type="text" name="email" required />
@@ -24,21 +25,19 @@ if (isset($_GET['error'])) {
 
 
 <?php else : ?>
+    <h1>Profilo Personale</h1>
     <form id="logout_form" action="?page=logout" method="post" name="logout_form">
+        <a class="commit_button" href="<?php echo ROOT_URL; ?>public?page=modify_data">Modifica Il Profilo</a>
         <input class="commit_button" type="submit" value="Logout" />
     </form>
+
 
 <?php endif; ?>
 
 <section id="about">
-    <article id="registration">
-        <h2>Non sei ancora registrato? Registrati ora senza costi aggiuntivi!</h2>
-        <a href="<?php echo ROOT_URL; ?>public?page=registrazione">Registrazione</a>
-    </article>
     <article id="trattamento">
         <h2>Sul trattamento dei dati:</h2>
         <p>Questo sito web utilizza cookie di tipo tecnico (per consentire il corretto funzionamento del sito e rendere più rapido e migliore il suo utilizzo). Non usufruiamo di ulteriori strumenti o cookie di diverso tipo da quelli sopracitati, ne ci affidiamo ad aziende di terze parti per la loro gestione o per poter garantire il corretto funzionamento del sito web.</p>
         <p>Per quanto concerne i dettagli sulla privacy e il trattamento dei dati, vi rimandiamo alla sezione <a href="<?php echo ROOT_URL; ?>public?page=info">Info e Contatti</a>.</p>
     </article>
 </section>
-<aside id="pageFiller"></aside>

@@ -5,7 +5,7 @@ require_once ROOT_PATH . "/sito/script/functions.php";
 if (isset($_POST['email'], $_POST['password'],  $_POST['confirm'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $confirm =$_POST['confirm'];
+    $confirm = $_POST['confirm'];
     //  Check if product already exist
     if (isANewProduct($mysqli, $email)) {
         echo "E-mail already exist";
