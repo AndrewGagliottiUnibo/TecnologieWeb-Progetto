@@ -38,9 +38,9 @@ $product = $productsMgr->get($id);
   </div>
 
   <?php if ($usrLogged) : ?>
-    <input id="btn-add" name="add_to_cart" type="button" value="Aggiungi al carrello">
+    <input class="commit_button" id="btn-add" name="add_to_cart" type="button" value="Aggiungi al carrello">
   <?php else : ?>
-    <input id="btn-not-log" name="add_to_cart" type="button" value="Aggiungi al carrello">
+    <input class="commit_button" id="btn-not-log" name="add_to_cart" type="button" value="Aggiungi al carrello">
   <?php endif; ?>
 
 
