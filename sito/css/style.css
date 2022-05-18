@@ -451,7 +451,7 @@ p.product_description {
 }
 
 input#btn-add,
-input#btn-not-log {
+input#btn-not-log, a#btn-add {
     margin: auto;
     margin-bottom: 3%;
 }
