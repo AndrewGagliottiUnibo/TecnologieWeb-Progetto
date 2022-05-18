@@ -77,11 +77,11 @@ $cart_items = $cm->getCartItems($cartId);
             <?php endforeach; ?>
         </ul>
 
-    <section class="purchase_sec">
-        <div class="purchase_container">
-            <a id="btn-add" class="commit_button" href="<?php echo ROOT_URL; ?>public?page=payment">Checkout</a>
-        </div>
-    </section>
+        <section class="purchase_sec">
+            <div class="purchase_container">
+                <a id="btn-add" class="commit_button" href="<?php echo ROOT_URL; ?>shop?page=payment">Checkout</a>
+            </div>
+        </section>
 
     <?php else : ?>
         <h1>Nesun articolo nel carrello!</h1>
