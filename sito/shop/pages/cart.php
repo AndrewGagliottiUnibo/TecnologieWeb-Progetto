@@ -47,28 +47,28 @@ $cart_items = $cm->getCartItems($cartId);
                     <div class="top">
                         <img src="<?php echo IMAGE_URL . $item['image'] ?>" alt="">
                         <div class="description">
-                            <h3><?php echo htmlspecialchars($item['name']); ?></h3>
+                            <h3 class="product_name"><?php echo htmlspecialchars($item['name']); ?></h3>
                         </div>
                     </div>
 
                     <div class="bottom">
                         <div>
-                            <p>€<?php echo htmlspecialchars($item['total_price']); ?></p>
+                            <p class="price">€<?php echo htmlspecialchars($item['total_price']); ?></p>
                         </div>
 
                         <div>
-                            <form method="post">
-                                <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($item['id']); ?>">
-                                <input name="minus" type="submit" value="-">
+                            <form class="quantity-modifier" method="post">
+                                <input class="item-qty" type="hidden" name="product_id" value="<?php echo htmlspecialchars($item['id']); ?>">
+                                <input class="cart-btn" name="minus" type="submit" value="-">
                                 <span><?php echo htmlspecialchars($item['quantity']); ?></span>
-                                <input name="plus" type="submit" value="+">
+                                <input class="cart-btn" name="plus" type="submit" value="+">
                             </form>
                         </div>
 
                         <div class="buttons">
                             <form method="post">
                                 <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($item['id']); ?>">
-                                <input name="delete" type="submit" value="delete">
+                                <input class="commit_button" name="delete" type="submit" value="delete">
                             </form>
                         </div>
                     </div>
