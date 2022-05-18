@@ -468,6 +468,7 @@ input#btn-not-log, a#btn-add {
 }
 
 .products>.item-cart {
+    margin-top: 5%;
     display: flex;
     flex-direction: column;
 }
@@ -481,9 +482,38 @@ input#btn-not-log, a#btn-add {
 }
 
 .top>img {
+    margin: 2%;
+    align-content: center;
     min-width: 150px;
     height: 150px;
     object-fit: cover;
+    border-color: var(--main-title-color);
+    border-style: solid;
+}
+
+.top h3.product_name {
+    font-size: x-large;
+    width: auto;
+}
+
+/* Cart buttons for operations */
+.quantity-modifier {
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    border-style: solid;
+    border-color: var(--main-title-color);
+    font-size: x-large;
+    background-color: var(--main-title-color);
+    color: var(--main-bg-color);
+}
+
+.item-qty, .cart-btn, .cart-btn-delete {
+    width: 40%;
+    margin: 0;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: var(--main-bg-color);
 }
 
 /* Hamburger Button */
@@ -566,7 +596,6 @@ button {
 }
 
 /* Forms */
-
 form>input,
 form>select {
     width: 80%;
@@ -890,6 +919,7 @@ aside>h2 {
     h3.product_name {
         margin: 0;
         padding: 2%;
+        width: 50%;
     }
 
     p.price {
