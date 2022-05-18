@@ -453,6 +453,7 @@ p.product_description {
 input#btn-add,
 input#btn-not-log, a#btn-add {
     margin: auto;
+    margin-top: 10%;
     margin-bottom: 3%;
 }
 
@@ -465,6 +466,7 @@ input#btn-not-log, a#btn-add {
     border-style: solid;
     width: 80%;
     margin: 0% auto;
+    margin-bottom: 2%;
 }
 
 .products>.item-cart {
@@ -508,12 +510,45 @@ input#btn-not-log, a#btn-add {
     color: var(--main-bg-color);
 }
 
-.item-qty, .cart-btn, .cart-btn-delete {
-    width: 40%;
+.item-qty, .cart-btn, .cart-btn-delete, form.delete-btn {
     margin: 0;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding-top: 0;
+    padding-bottom: 0;
     background-color: var(--main-bg-color);
+    font-size: large;
+    border: 2px solid;
+    border-radius: 0.5rem;
+    border-color: var(--main-title-color);
+    border-style: solid;
+}
+
+.delete_button {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-decoration: solid;
+    color: var(--main-title-color);
+    background-color: #eff7e3;
+    font-weight: bold;
+    outline: none;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+
+input.delete_button {
+    width: 100%;
+    padding: 1%;
+}
+
+.delete_button:hover, .cart-btn:hover {
+    border: 2px solid;
+    border-radius: 0.5rem;
+    background: var(--main-title-color);
+    color: var(--main-hv-color);
+}
+
+.query_qty {
+    margin: 2%;
 }
 
 /* Hamburger Button */

@@ -56,19 +56,17 @@ $cart_items = $cm->getCartItems($cartId);
                             <p class="price">€<?php echo htmlspecialchars($item['total_price']); ?></p>
                         </div>
 
-                        <div>
-                            <form class="quantity-modifier" method="post">
-                                <input class="item-qty" type="hidden" name="product_id" value="<?php echo htmlspecialchars($item['id']); ?>">
-                                <input class="cart-btn" name="minus" type="submit" value="-">
-                                <span><?php echo htmlspecialchars($item['quantity']); ?></span>
-                                <input class="cart-btn" name="plus" type="submit" value="+">
-                            </form>
-                        </div>
+                        <form class="quantity-modifier" method="post">
+                            <input class="item-qty" type="hidden" name="product_id" value="<?php echo htmlspecialchars($item['id']); ?>">
+                            <input class="cart-btn" name="minus" type="submit" value="-">
+                            <span class="query_qty" ><?php echo htmlspecialchars($item['quantity']); ?> </span>
+                            <input class="cart-btn" name="plus" type="submit" value="+">
+                        </form>
 
                         <div class="buttons">
-                            <form method="post">
+                            <form class="delete-btn" method="post">
                                 <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($item['id']); ?>">
-                                <input class="commit_button" name="delete" type="submit" value="delete">
+                                <input class="delete_button" name="delete" type="submit" value=" Rimuovi ">
                             </form>
                         </div>
                     </div>
