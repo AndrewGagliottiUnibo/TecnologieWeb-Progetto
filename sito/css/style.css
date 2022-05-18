@@ -750,17 +750,32 @@ section.payment {
     color: #555555;
 }
 
-.btn,
-.pay {
+.btn {
     text-decoration: none;
-    align-items: center;
     text-align: center;
-    margin-top: 40px;
-    background: var(--main-title-color);
-    padding: 12px;
-    color: var(--main-hv-color);
     border-radius: 5px;
     cursor: pointer;
+}
+
+.pay {
+    color: var(--main-title-color);
+    background: var(--main-hv-color);
+    padding: 12px;
+    font-size: 1.6em;
+    border: 2px solid;
+    border-radius: 0.5rem;
+    border-color: var(--main-title-color);
+    border-style: solid;
+    text-decoration: solid;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.pay:hover,
+.pay:focus {
+    background: var(--main-title-color);
+    color: var(--main-hv-color);
 }
 
 .payment-logo {

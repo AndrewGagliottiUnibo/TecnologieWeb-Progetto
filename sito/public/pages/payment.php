@@ -1,13 +1,13 @@
-<!-- <?php 
-include_once ROOT_PATH . "/sito/script/purchase.js";
-?> -->
+<!-- <?php
+        include_once ROOT_PATH . "/sito/script/purchase.js";
+        ?> -->
 
 <section class="payment">
     <div class="payment-logo">
         <p>p</p>
     </div>
 
-<h2>Sezione di pagamento</h2>
+    <h2>Sezione di pagamento</h2>
     <div class="compiation_form">
         <div class="space icon-relative">
             <label for="proprietario" class="label_data">Proprietario:</label>
@@ -22,7 +22,7 @@ include_once ROOT_PATH . "/sito/script/purchase.js";
         <div class="input-grp space">
             <div class="input-item icon-relative">
                 <label for="scadenza" class="label_data">Scadenza:</label>
-                <input id="scadenza" type="text" name="expiry-data" class="input_data" data-mask="00 / 00"  placeholder="00 / 00">
+                <input id="scadenza" type="text" name="expiry-data" class="input_data" data-mask="00 / 00" placeholder="00 / 00">
                 <i class="far fa-calendar-alt"></i>
             </div>
             <div class="input-item icon-relative">
@@ -31,17 +31,16 @@ include_once ROOT_PATH . "/sito/script/purchase.js";
                 <i class="fas fa-lock"></i>
             </div>
         </div>
-        
+
         <div class="btn">
             <a class="pay" href="<?php echo ROOT_URL; ?>public?page=homepage">Pay</a>
-        </div> 
-        
+        </div>
+
     </div>
 </section>
 <aside>
     <h2>Informazioni sulla consegna</h2>
-        <div class=advise>
-            <p>La consegna avverrà al <span>Primo Piano</span> del complesso universitario in <span>Via dell'Università 50</span> di <span>Cesena</span>. Al momento della consegna siete pregati di fornire il vostro <span>Nome</span> e <span>Cognome</span> al corriere.</p>
-        </div>
+    <div class=advise>
+        <p>La consegna avverrà al <span>Primo Piano</span> del complesso universitario in <span>Via dell'Università 50</span> di <span>Cesena</span>. Al momento della consegna siete pregati di fornire il vostro <span>Nome</span> e <span>Cognome</span> al corriere.</p>
+    </div>
 </aside>
-
