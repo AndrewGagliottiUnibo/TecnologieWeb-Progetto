@@ -410,22 +410,13 @@ section#accessPoint form input[type="submit"] {
 }
 
 /* Single product view */
-.single_product {
-    display: inline-block;
-    justify-content: center;
-}
-
 img.product_photo {
-    height: 460px;
-    width: 460px;
-    margin: 2%;
+    height: 450px;
+    width: 450px;
+    margin-top: 2%;
+    margin-left: 4%;
     padding: 2%;
     background-color: white;
-}
-
-.product_info {
-    margin: 2%;
-    padding: 2%;
 }
 
 .product_info>h3 {
@@ -461,8 +452,8 @@ p.product_description {
 
 input#btn-add,
 input#btn-not-log {
-    margin-bottom: 5%;
-    align-items: center;
+    margin: auto;
+    margin-bottom: 3%;
 }
 
 /* Cart */

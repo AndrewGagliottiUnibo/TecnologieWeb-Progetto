@@ -44,3 +44,4 @@ if (isset($_POST['oldPassword'], $_POST['newPassword'],  $_POST['confirm'])) {
     echo("pippo");
     Header('Location:' . ROOT_PATH . "public/?page=login");
 }
+?>
