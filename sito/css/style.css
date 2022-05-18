@@ -875,6 +875,46 @@ aside>h2 {
     }
 
     /* Product */
+    section.single_product {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+    }
+
+    img.product_photo {
+        width: 30%;
+        height: 30%;
+    }
+
+    .product_info {
+        margin: 0;
+        padding: 0;
+    }
+
+    .product_info > h3 {
+        width: 20%;
+        margin: 1%;
+        padding: 1%;
+        clear: both;
+    }
+
+    p.price {
+        
+        width: 10%;
+    }
+
+    p.product_description {
+        float: right;
+        width: 40%;
+        clear: both;
+    }
+
+    .commit_button {
+        margin: 2%;
+        padding: 2%;
+        align-content: center;
+        justify-content: center;
+    }
 
     /* Footer */
     footer {
