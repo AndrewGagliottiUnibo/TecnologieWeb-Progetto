@@ -1,7 +1,5 @@
 <?php
 //fetch data from database
-$result;
-
 $stmt = $mysqli->prepare("SELECT * FROM products");
 $stmt->execute(); // esegue la query appena creata.
 $result = $stmt->get_result();

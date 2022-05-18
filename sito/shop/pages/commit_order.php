@@ -2,6 +2,7 @@
 require_once ROOT_PATH . "/sito/inc/init.php";
 // Mando delle notifiche riguardo l'ordine appena effettuato
 $id = $_SESSION['user_id'];
+$username = $_SESSION['username'];
 $message = "Hai effettuato un ordine!";
 $date = date("Y/m/d h:i:s");
 
@@ -13,7 +14,7 @@ if (!($stmt = $mysqli->prepare("INSERT INTO notifications (user, message, dateti
 $stmt->bind_param('iss', $id, $message, $date);
 $stmt->execute();
 
-$message = "Un ordine è stato effetuato";
+$message = "Un ordine è stato effettuato da " . $username;
 // Invio una notifica agli admin
 if (!($stmt = $mysqli->prepare("INSERT INTO notifications_admin (user, message, datetime) VALUES (?, ?, ?)"))) {
     return;

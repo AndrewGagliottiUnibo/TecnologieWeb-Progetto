@@ -31,7 +31,7 @@
                 <a class="collapsable" href="<?php echo ROOT_URL; ?>shop?page=catalogo">Catalogo</a>
             </li>
             <li>
-                <a class="collapsable" href="#">Notifiche</a>
+                <a class="collapsable" href="<?php echo ROOT_URL; ?>public?page=notification">Notifiche</a>
             </li>
             <li>
                 <a class="collapsable" href="<?php echo ROOT_URL; ?>public?page=info">Info e Contatti</a>
