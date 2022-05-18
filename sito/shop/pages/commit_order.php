@@ -44,3 +44,5 @@ if (!($stmt = $mysqli->prepare("DELETE FROM cart WHERE id = ?"))) {
 }
 $stmt->bind_param('i', $cart_id);
 $stmt->execute();
+Header('Location:' . ROOT_URL . "public?page=homepage");
+
