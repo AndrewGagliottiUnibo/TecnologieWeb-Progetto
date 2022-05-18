@@ -410,17 +410,16 @@ section#accessPoint form input[type="submit"] {
 }
 
 /* Single product view */
-section .single_product {
-    display: flex;
-    align-items: center;
+.single_product {
+    display: inline-block;
     justify-content: center;
 }
 
 img.product_photo {
-    height: 480px;
-    width: 480px;
+    height: 460px;
+    width: 460px;
     margin: 2%;
-    padding: 3%;
+    padding: 2%;
     background-color: white;
 }
 

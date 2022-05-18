@@ -39,8 +39,8 @@ function formModifyHash(form, old_Password, new_Password, confirm_Password) {
 var check = function () {
   if (document.getElementById('password_new').value ==
     document.getElementById('password_confirmation').value) {
-    document.getElementById('message').innerHTML = 'matching';
+    document.getElementById('message').innerHTML = 'Le password combaciano';
   } else {
-    document.getElementById('message').innerHTML = 'not matching';
+    document.getElementById('message').innerHTML = 'Le password non combaciano';
   }
 }
