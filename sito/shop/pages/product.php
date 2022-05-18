@@ -30,12 +30,15 @@ $product = $productsMgr->get($id);
 ?>
 
 <section class="single_product">
+  <h3 class="product_name"><?php echo $product->name ?></h3>
   <div class="product_info">
     <img class="product_photo" src="<?php echo IMAGE_URL . $product->image ?>" alt="">
-    <h3><?php echo $product->name ?></h3>
-    <p class="price"><?php echo $product->price ?> €</p>
-    <p class="product_description"><?php echo $product->description ?></p>
+    <div class="product_data">
+      <p class="product_description"><?php echo $product->description ?></p>
+      <p class="price"><?php echo $product->price ?> €</p>
+    </div>
   </div>
+  
 
   <?php if ($usrLogged) : ?>
     <input class="commit_button" id="btn-add" name="add_to_cart" type="button" value="Aggiungi al carrello">

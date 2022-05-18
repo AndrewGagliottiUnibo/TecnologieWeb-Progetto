@@ -419,7 +419,7 @@ img.product_photo {
     background-color: white;
 }
 
-.product_info>h3 {
+h3.product_name {
     margin: 1%;
     padding: 2%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -826,7 +826,7 @@ aside>h2 {
 }
 
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:960px) {
 
     /* NavBar */
     #hamburger {
@@ -869,42 +869,49 @@ aside>h2 {
 
     /* Product */
     section.single_product {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-    }
-
-    img.product_photo {
-        width: 30%;
-        height: 30%;
-    }
-
-    .product_info {
         margin: 0;
         padding: 0;
     }
 
-    .product_info>h3 {
-        width: 20%;
-        margin: 1%;
-        padding: 1%;
-        clear: both;
+    img.product_photo {
+        margin: 2%;
+        padding: 0;
+        width: 50%;
+        height: 50%;
+    }
+
+    .product_info {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+    }
+
+    h3.product_name {
+        margin: 0;
+        padding: 2%;
     }
 
     p.price {
+        width: 40%;
+        max-height: 10%;
+        align-self: flex-end;
+        margin-top: auto;
+        text-align: right;
+        flex: content;
+    }
 
-        width: 10%;
+    .product_data {
+        margin: 1%;
+        display: flex;
+        flex-direction: column;
     }
 
     p.product_description {
-        float: right;
-        width: 40%;
-        clear: both;
-    }
-
-    .commit_button {
+        max-height: 90%;
         margin: 2%;
         padding: 2%;
+        width: 90%;
     }
 
     /* Footer */
