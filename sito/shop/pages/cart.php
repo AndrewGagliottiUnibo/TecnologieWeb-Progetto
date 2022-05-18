@@ -77,7 +77,7 @@ $cart_items = $cm->getCartItems($cartId);
 
         <section class="purchase_sec">
             <div class="purchase_container">
-                <a id="btn-add" class="commit_button" href="<?php echo ROOT_URL; ?>shop?page=payment">Checkout</a>
+                <a id="btn-pay" class="commit_button" href="<?php echo ROOT_URL; ?>shop?page=payment">Checkout</a>
             </div>
         </section>
 

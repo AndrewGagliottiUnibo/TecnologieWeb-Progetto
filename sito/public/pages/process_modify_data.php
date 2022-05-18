@@ -23,7 +23,7 @@ if (isset($_POST['oldPassword'], $_POST['newPassword'],  $_POST['confirm'])) {
     $check = hash('sha512', $oldPassword . $salt);
     if ($check !== $db_password) {
         echo ("Password errata, inserisci la password corretta");
-        Header('Location:' . ROOT_PATH . "public/?page=login");
+        Header('Location:' . ROOT_PATH . "public?page=login");
         return;
     }
     //  Codifico la nuova password
@@ -33,7 +33,7 @@ if (isset($_POST['oldPassword'], $_POST['newPassword'],  $_POST['confirm'])) {
     // Aggiorno salt e password dell'utente
     if (!($stmt = $mysqli->prepare("UPDATE members SET password = ?, salt = ? WHERE id = ?"))) {
         echo ("Connection to db failed");
-        Header('Location:' . ROOT_PATH . "public/?page=login");
+        Header('Location:' . ROOT_PATH . "public?page=login");
         return;
     }
     $stmt->bind_param('ssi', $newPassword, $random_salt, $usrId);
@@ -42,6 +42,6 @@ if (isset($_POST['oldPassword'], $_POST['newPassword'],  $_POST['confirm'])) {
     // Aggiorno i dati della sessione in seguito al cambio password
     $_SESSION['login_string'] = hash('sha512', $newPassword . $_SERVER['HTTP_USER_AGENT']);
     echo("pippo");
-    Header('Location:' . ROOT_PATH . "public/?page=login");
+    Header('Location:' . ROOT_PATH . "public?page=login");
 }
 ?>
