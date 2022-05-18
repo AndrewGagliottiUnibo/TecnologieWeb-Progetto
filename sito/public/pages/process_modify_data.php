@@ -7,37 +7,37 @@ if (isset($_POST['oldPassword'], $_POST['newPassword'],  $_POST['confirm'])) {
     $oldPassword = $_POST['oldPassword'];
     $newPassword = $_POST['newPassword'];
     $confirm = $_POST['confirm'];
-    var_dump($oldPassword);
-    var_dump($newPassword);
 
-    //  Ottengo la password attuale
-    $stmt = $mysqli->prepare("SELECT email, password, salt FROM members WHERE id = ? LIMIT 1");
+    // Ottengo salt e password attuali dell'utente
+    if (!($stmt = $mysqli->prepare("SELECT password, salt FROM members WHERE id = ? LIMIT 1"))) {
+        echo ("Connection to db failed");
+        return;
+    }
     $stmt->bind_param('i', $usrId);
     $stmt->execute();
     $result = mysqli_fetch_array($stmt->get_result());
-    $email =  $result['email'];
     $salt =  $result['salt'];
     $db_password =  $result['password'];
+
+    // Codifico la vecchia password inserita per verificare che sia quella attuale
     $check = hash('sha512', $oldPassword . $salt);
-
-    // controllo se la vecchia password coincide con quella attuale
-    if ($check === $db_password) {
-        //Codfico la nuova pass
-        $random_salt = hash('sha512', uniqid(mt_rand(1, mt_getrandmax()), true));
-        $newPassword = hash('sha512', $newPassword . $random_salt);
-
-        $stmt = $mysqli->prepare("UPDATE members SET password = ?, salt = ? WHERE id = ?");
-        $stmt->bind_param('ssi', $newPassword, $random_salt, $usrId);
-        $stmt->execute();
-
-        // logout
-        $_SESSION = array();
-        // Recupera i parametri di sessione.
-        $params = session_get_cookie_params();
-        // Cancella i cookie attuali.
-        setcookie(session_name(), '', time() - 42000, $params["path"], $params["domain"], $params["secure"], $params["httponly"]);
-        // Cancella la sessione.
-        session_destroy();
-        login($email, $confirm, $mysqli);
+    if ($check !== $db_password) {
+        echo ("Password errata, inserisci la password corretta");
+        return;
     }
+    //  Codifico la nuova password
+    $random_salt = hash('sha512', uniqid(mt_rand(1, mt_getrandmax()), true));
+    $newPassword = hash('sha512', $newPassword . $random_salt);
+
+    // Aggiorno salt e password dell'utente
+    if (!($stmt = $mysqli->prepare("UPDATE members SET password = ?, salt = ? WHERE id = ?"))) {
+        echo ("Connection to db failed");
+        return;
+    }
+    $stmt->bind_param('ssi', $newPassword, $random_salt, $usrId);
+    $stmt->execute();
+
+    // Aggiorno i dati della sessione in seguito al cambio password
+    $_SESSION['login_string'] = hash('sha512', $newPassword . $_SERVER['HTTP_USER_AGENT']);
+    echo ("Password modificata con successo");
 }
