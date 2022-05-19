@@ -1074,10 +1074,27 @@ table .material-icons:hover {
     }
 
     /* Forms */
-
     form {
         margin-right: 30%;
         margin-left: 30%;
     }
 
+    /* Cart */
+    .top > img {
+        margin: 3%;
+        margin-left: 100px;
+        margin-right: 100px;
+        max-width: 10%;
+        align-content: left;
+        min-width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-color: var(--main-title-color);
+        border-style: solid;
+    }
+
+    .top {
+        align-self:flex-start;
+        margin-left: 0;
+    }
 }
