@@ -526,8 +526,14 @@ p.cookie-declaration {
     align-content: space-between;
 }
 
+.top {
+    align-self: flex-start;
+    margin-left: 5px;
+}
+
 .top>img {
     margin: 2%;
+    margin-left: 3px;
     align-content: center;
     min-width: 150px;
     height: 150px;
@@ -536,9 +542,9 @@ p.cookie-declaration {
     border-style: solid;
 }
 
-.top h3.product_name {
+h3.product_name {
     font-size: x-large;
-    width: auto;
+    width: 180px;
 }
 
 /* Cart buttons for operations */
@@ -1094,7 +1100,7 @@ table .material-icons:hover {
     }
 
     .top {
-        align-self:flex-start;
+        align-self: flex-start;
         margin-left: 0;
     }
 
