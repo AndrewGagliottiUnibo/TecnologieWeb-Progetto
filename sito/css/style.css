@@ -434,6 +434,8 @@ h3.product_name {
 }
 
 p.price {
+    margin-left: 2px;
+    margin-right: 2px;
     text-decoration: solid;
     text-decoration: underline;
     font-style: normal;
@@ -561,6 +563,8 @@ h3.product_name {
 
 .item-qty, .cart-btn, .cart-btn-delete, form.delete-btn {
     margin: 0;
+    margin-left: 2px;
+    margin-right: 2px;
     padding-top: 0;
     padding-bottom: 0;
     background-color: var(--main-bg-color);
@@ -573,6 +577,8 @@ h3.product_name {
 
 .delete_button {
     margin: 0;
+    margin-left: 2px;
+    margin-right: 2px;
     padding: 0;
     text-align: center;
     text-decoration: solid;
@@ -1047,6 +1053,8 @@ table .material-icons:hover {
     }
 
     p.price {
+        margin-left: 2px;
+        margin-right: 2px;
         width: 40%;
         max-height: 10%;
         align-self: flex-end;
