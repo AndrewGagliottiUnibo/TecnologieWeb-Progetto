@@ -1,13 +1,14 @@
 const cookieContainer = document.querySelector(".cookie-container");
 const cookieButton = document.querySelector(".cookie-btn");
+sessionStorage.setItem("cookieBannerDisplayed", "false");
 
 cookieButton.addEventListener("click", () => {
-    cookieContainer.classList.add("active");
+    cookieContainer.classList.remove("active");
     sessionStorage.setItem("cookieBannerDisplayed", "true");
 });
 
 setTimeout(() => {
 if (!sessionStorage.getItem("cookieBannerDisplayed")) {
-    cookieContainer.classList.remove("active");
+    cookieContainer.classList.add("active");
 }
 }, 2000);

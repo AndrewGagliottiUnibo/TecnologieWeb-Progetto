@@ -27,5 +27,6 @@ $page = isset($_GET["page"]) ? $_GET["page"] : "catalogo";
 <script type="text/javascript" src="../script/navbar.js"></script>
 <script type="text/javascript" src="../script/card.js"></script>
 <script type="text/javascript" src="../script/productHandler.js"></script>
+<script type="text/javascript" src="../script/cookie.js"></script>
 
 </html>

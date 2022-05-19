@@ -13,6 +13,7 @@ $page = isset($_GET["page"]) ? $_GET["page"] : "homepage";
     <title>CacPlus.inc</title>
     <link rel="stylesheet" href="../css/style.css">
     <script type="text/javascript" src="../script/navbar.js"></script>
+    <script type="text/javascript" src="../script/cookie.js"></script>
 </head>
 
 <body>
