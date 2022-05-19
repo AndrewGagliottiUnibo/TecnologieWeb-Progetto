@@ -1,5 +1,6 @@
 <?php
 $table = "notifications";
+$stmt;
 if (isset($_SESSION['user_id'])) {
     if (isAdmin($mysqli)) {
         $table = "notifications_admin";
@@ -12,7 +13,6 @@ if (isset($_SESSION['user_id'])) {
 
     $stmt->execute(); // esegue la query appena creata.
     $result = $stmt->get_result();
-    $result = mysqli_fetch_array($result);
 }
 ?>
 
@@ -20,7 +20,7 @@ if (isset($_SESSION['user_id'])) {
 
 <section id="notifications_section">
     <?php if (login_check($mysqli)) : ?>
-        <?php if (empty($result)) : ?>
+        <?php if (mysqli_num_rows($result) == 0) : ?>
             <h2>Nessuna notifica da mostrare!</h2>
             <a class="commit_button" href="<?php echo ROOT_URL; ?>shop?page=catalogo">Visita il nostro catalogo!</a>
         <?php else : ?>
@@ -34,7 +34,7 @@ if (isset($_SESSION['user_id'])) {
                             delete_sweep
                         </button></th>
                 </tr>
-                <?php while ($row = $result) { ?>
+                <?php while ($row = mysqli_fetch_array($result)) { ?>
                     <tr>
                         <td><?php echo $row['message']; ?></td>
                         <td><?php echo $row['datetime']; ?></td>
