@@ -28,8 +28,4 @@ $page = isset($_GET["page"]) ? $_GET["page"] : "homepage";
 <script type="text/javascript" src="../script/navbar.js"></script>
 <script type="text/javascript" src="../script/adminButtonBox.js"></script>
 <script type="text/javascript" src="../script/card.js"></script>
-<script type="text/javascript" src="../script/cookie.js"></script>
-
-
-
 </html>
