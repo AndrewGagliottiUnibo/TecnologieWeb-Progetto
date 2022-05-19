@@ -457,7 +457,9 @@ p.product_description {
     background-color: white;
 }
 
-input#btn-add, input#btn-not-log, a#btn-pay {
+input#btn-add,
+input#btn-not-log,
+a#btn-pay {
     margin: auto;
     margin-top: 10%;
     margin-bottom: 3%;
@@ -468,9 +470,9 @@ p.cookie-declaration {
     margin: 24px 0;
     line-height: 2;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
+}
 
-  .cookie-container {
+.cookie-container {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -480,18 +482,18 @@ p.cookie-declaration {
     padding: 0 32px;
     box-shadow: 0 -2px 16px var(--main-title-color);
     transition: 400ms;
-  }
-  
-  .cookie-container.not_active {
+}
+
+.cookie-container.not_active {
     display: none;
-  }
-  
-  .cookie-container a.cookie-anchor {
+}
+
+.cookie-container a.cookie-anchor {
     color: var(--main-bg-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-  
-  .cookie-btn {
+}
+
+.cookie-btn {
     background: var(--main-bg-color);
     border: 0;
     color: var(--main-title-color);
@@ -501,7 +503,7 @@ p.cookie-declaration {
     border-radius: 8px;
     cursor: pointer;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
+}
 
 /* Cart */
 .shopping-cart {
@@ -521,7 +523,8 @@ p.cookie-declaration {
     flex-direction: column;
 }
 
-.item-cart>.top, .bottom {
+.item-cart>.top,
+.bottom {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -561,7 +564,10 @@ h3.product_name {
     color: var(--main-bg-color);
 }
 
-.item-qty, .cart-btn, .cart-btn-delete, form.delete-btn {
+.item-qty,
+.cart-btn,
+.cart-btn-delete,
+form.delete-btn {
     margin: 0;
     margin-left: 2px;
     margin-right: 2px;
@@ -595,7 +601,8 @@ input.delete_button {
     padding: 1%;
 }
 
-.delete_button:hover, .cart-btn:hover {
+.delete_button:hover,
+.cart-btn:hover {
     border: 2px solid;
     border-radius: 0.5rem;
     background: var(--main-title-color);
@@ -948,7 +955,7 @@ aside>h2 {
 section#notifications_section {
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
 }
 
 table {
@@ -1094,7 +1101,7 @@ table .material-icons:hover {
     }
 
     /* Cart */
-    .top > img {
+    .top>img {
         margin: 3%;
         margin-left: 100px;
         margin-right: 100px;
