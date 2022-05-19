@@ -36,7 +36,7 @@
 <div class="cookie-container">
       <p class="cookie-declaration">
         Utiliziamo i cookie nel nostro sito per garantire un corretto funzionamento del servizio. Per ulteriori informazioni controlla la nostra
-        <a href="<?php echo ROOT_URL; ?>public?page=info">cookie policy.</a>.
+        <a class="cookie-anchor" href="<?php echo ROOT_URL; ?>public?page=info">cookie policy.</a>.
       </p>
 
       <button class="cookie-btn">

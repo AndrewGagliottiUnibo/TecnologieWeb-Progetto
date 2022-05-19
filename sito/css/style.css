@@ -458,6 +458,43 @@ a#btn-pay {
     margin-bottom: 3%;
 }
 
+/* Cookie declaration banner */
+p.cookie-declaration {
+    margin: 24px 0;
+    line-height: 2;
+  }
+
+  .cookie-container {
+    /*position: fixed;*/
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: var(--main-title-color);
+    color: var(--main-bg-color);
+    padding: 0 32px;
+    box-shadow: 0 -2px 16px var(--main-title-color);
+    transition: 400ms;
+  }
+  
+  .cookie-container.active {
+    bottom: 0;
+  }
+  
+  .cookie-container a.cookie-anchor {
+    color: var(--main-bg-color);
+  }
+  
+  .cookie-btn {
+    background: var(--main-bg-color);
+    border: 0;
+    color: var(--main-title-color);
+    padding: 12px 48px;
+    font-size: 18px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
 /* Cart */
 .shopping-cart {
     padding: 2% 0%;
