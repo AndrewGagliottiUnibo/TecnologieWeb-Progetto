@@ -29,5 +29,6 @@ $page = isset($_GET["page"]) ? $_GET["page"] : "homepage";
 <script type="text/javascript" src="../script/sha512.js"></script>
 <script type="text/javascript" src="../script/listeners.js"></script>
 <script type="text/javascript" src="../script/forms.js"></script>
+<script type="text/javascript" src="../script/cookie.js"></script>
 
 </html>
