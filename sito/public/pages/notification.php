@@ -14,13 +14,13 @@ $result = $stmt->get_result();
 
 ?>
 
-<section class="notification">
-    <table>
+<section id="notifications_section">
+    <table id="notifications_table">
         <caption>Notifiche</caption>
         <tr>
             <th scope="col">Messaggio</th>
             <th scope="col">Data</th>
-            <th><button class="material-icons">
+            <th><button class="material-icons" name="all">
                     delete_sweep
                 </button></th>
         </tr>
@@ -28,7 +28,7 @@ $result = $stmt->get_result();
             <tr>
                 <td><?php echo $row['message']; ?></td>
                 <td><?php echo $row['datetime']; ?></td>
-                <td><button class="material-icons">
+                <td><button class="material-icons" name="<?php echo $row['id']; ?>">
                         delete
                     </button></td>
             </tr>
