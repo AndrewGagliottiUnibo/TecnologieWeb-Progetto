@@ -1097,4 +1097,8 @@ table .material-icons:hover {
         align-self:flex-start;
         margin-left: 0;
     }
+
+    h3.product_name {
+        min-width: 400px;
+    }
 }
