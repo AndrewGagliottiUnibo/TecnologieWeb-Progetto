@@ -467,6 +467,7 @@ a#btn-pay {
 p.cookie-declaration {
     margin: 24px 0;
     line-height: 2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
   .cookie-container {
@@ -487,6 +488,7 @@ p.cookie-declaration {
   
   .cookie-container a.cookie-anchor {
     color: var(--main-bg-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   
   .cookie-btn {
@@ -498,6 +500,7 @@ p.cookie-declaration {
     margin-bottom: 16px;
     border-radius: 8px;
     cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
 /* Cart */
