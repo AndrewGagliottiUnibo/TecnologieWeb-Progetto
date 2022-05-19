@@ -38,12 +38,12 @@ $product = $productsMgr->get($id);
       <p class="price"><?php echo $product->price ?> €</p>
     </div>
   </div>
-  
+
 
   <?php if ($usrLogged) : ?>
-    <input class="commit_button" id="btn-add" name="add_to_cart" type="button" value="Aggiungi al carrello">
+    <input class="commit_button" id="btn-add" name="add_to_cart" type="submit" value="Aggiungi al carrello">
   <?php else : ?>
-    <input class="commit_button" id="btn-not-log" name="add_to_cart" type="button" value="Aggiungi al carrello">
+    <input class="commit_button" id="btn-not-log" name="add_to_cart" type="submit" value="Aggiungi al carrello">
   <?php endif; ?>
 
 
