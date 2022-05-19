@@ -325,6 +325,11 @@ footer ul li {
 }
 
 /* About us, Login e Registrazione */
+.info {
+    color: var(--main-title-color);
+    font-weight: bold;
+}
+
 h1 {
     font-size: xx-large;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
