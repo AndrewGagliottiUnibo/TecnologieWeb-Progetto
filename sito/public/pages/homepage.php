@@ -42,4 +42,4 @@
       <button class="cookie-btn">
         Okay
       </button>
-    </div>
+</div>

@@ -465,8 +465,8 @@ p.cookie-declaration {
   }
 
   .cookie-container {
-    /*position: fixed;*/
-    bottom: -100%;
+    position: fixed;
+    bottom: 0;
     left: 0;
     right: 0;
     background: var(--main-title-color);
