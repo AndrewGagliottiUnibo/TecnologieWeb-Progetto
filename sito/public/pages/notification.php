@@ -12,6 +12,7 @@ if (isset($_SESSION['user_id'])) {
 
     $stmt->execute(); // esegue la query appena creata.
     $result = $stmt->get_result();
+    $result = mysqli_fetch_array($result);
 }
 ?>
 
@@ -19,25 +20,31 @@ if (isset($_SESSION['user_id'])) {
 
 <section id="notifications_section">
     <?php if (login_check($mysqli)) : ?>
-        <table id="notifications_table">
-            <caption>Notifiche</caption>
-            <tr>
-                <th scope="col">Messaggio</th>
-                <th scope="col">Data</th>
-                <th><button class="material-icons" name="all">
-                        delete_sweep
-                    </button></th>
-            </tr>
-            <?php while ($row = mysqli_fetch_array($result)) { ?>
+        <?php if (empty($result)) : ?>
+            <h2>Nessuna notifica da mostrare!</h2>
+            <a class="commit_button" href="<?php echo ROOT_URL; ?>shop?page=catalogo">Visita il nostro catalogo!</a>
+        <?php else : ?>
+
+            <table id="notifications_table">
+                <caption>Notifiche</caption>
                 <tr>
-                    <td><?php echo $row['message']; ?></td>
-                    <td><?php echo $row['datetime']; ?></td>
-                    <td><button class="material-icons" name="<?php echo $row['id']; ?>">
-                            delete
-                        </button></td>
+                    <th scope="col">Messaggio</th>
+                    <th scope="col">Data</th>
+                    <th><button class="material-icons" name="all">
+                            delete_sweep
+                        </button></th>
                 </tr>
-            <?php } ?>
-        </table>
+                <?php while ($row = $result) { ?>
+                    <tr>
+                        <td><?php echo $row['message']; ?></td>
+                        <td><?php echo $row['datetime']; ?></td>
+                        <td><button class="material-icons" name="<?php echo $row['id']; ?>">
+                                delete
+                            </button></td>
+                    </tr>
+                <?php } ?>
+            </table>
+        <?php endif; ?>
     <?php else : ?>
         <h2>Devi loggare per visualizzare questa pagina!</h2>
         <a class="commit_button" href="<?php echo ROOT_URL; ?>public?page=login">Vai nell'area di login!</a>
