@@ -482,7 +482,7 @@ p.cookie-declaration {
     transition: 400ms;
   }
   
-  .cookie-container.active {
+  .cookie-container.not_active {
     display: none;
   }
   
