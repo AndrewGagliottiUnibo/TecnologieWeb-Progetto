@@ -14,7 +14,7 @@ $result = $stmt->get_result();
 
 ?>
 
-<section>
+<section class="notification">
     <table>
         <caption>Notifiche</caption>
         <tr>
