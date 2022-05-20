@@ -1143,6 +1143,34 @@ table .material-icons:hover {
         margin-left: 30%;
     }
 
+    /* Admin page */
+    .dbOperations {
+        margin: 2%;
+    }
+
+    h3.adminOperation {
+        margin: 2%;
+        padding: 0;
+    }
+
+    p.operationDescription {
+        margin: 2%;
+        padding: 0;
+    }
+
+    .separator {
+        display: inline-block;
+        width: 45%;
+        min-height: 45%;
+        border-style: solid;
+        border: 2px solid;
+        border-radius: 0.5rem;
+        background-color: white;
+        border-color: #0D2C05;
+        padding: 10px;
+        margin: 2%;
+    }
+
     /* Cart */
     .top>img {
         margin: 3%;
