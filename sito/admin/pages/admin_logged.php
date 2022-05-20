@@ -1,21 +1,3 @@
-<?php
-if (isset($_POST['add_new_product'])) {
-    header("location:" . ROOT_URL . "admin?page=add_product");
-}
-
-if (isset($_POST['modify_product'])) {
-    header("location:" . ROOT_URL . "admin?page=modify_product");
-}
-
-if (isset($_POST['remove_product'])) {
-    header("location:" . ROOT_URL . "admin?page=remove_product");
-}
-
-if (isset($_POST['update-data'])) {
-    header("location:" . ROOT_URL . "admin?page=modify_data");
-}
-?>
-
 <h2 class="cool_title">Bentornato!</h2>
 <div class="dbOperations">
     <div class="separator">
