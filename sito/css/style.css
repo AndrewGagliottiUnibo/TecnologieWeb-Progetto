@@ -187,35 +187,6 @@ footer ul li {
     padding: 5%;
 }
 
-.vai_catalogo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 1% 0%;
-}
-
-.vai_catalogo>a {
-    min-width: 70%;
-    padding: 2% 0%;
-    border: 2px solid;
-    border-radius: 0.5rem;
-    border-color: #0D2C05;
-    border-style: solid;
-    text-align: center;
-    display: block;
-    text-decoration: solid;
-    color: #0D2C05;
-    box-sizing: border-box;
-    font-size: 40px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.vai_catalogo a:hover {
-    background: var(--main-title-color);
-    color: var(--main-hv-color);
-}
-
 /* Card */
 .cards {
     width: 100%;
@@ -995,7 +966,8 @@ p.operationDescription {
 }
 
 /* table */
-h2.cool_title, caption.cool_title {
+h2.cool_title,
+caption.cool_title {
     margin: 2%;
     padding: 2%;
     text-align: center;
@@ -1003,6 +975,7 @@ h2.cool_title, caption.cool_title {
     font-size: xx-large;
     color: var(--main-title-color);
 }
+
 .notifications_section {
     display: flex;
     align-items: center;
@@ -1140,10 +1113,6 @@ table .material-icons:hover {
     }
 
     /* In Evidenza */
-    .vai_catalogo>a {
-        min-width: 0%;
-        width: 30%;
-    }
 
     /* Forms */
     form {
