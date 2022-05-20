@@ -15,7 +15,7 @@ if (isset($_GET['error'])) {
         <input id="login_email" type="text" name="email" required />
         <label for="login_password">Password</label>
         <input id="login_password" type="password" name="p" required />
-        <input class="commit_button" type="button" value="Login" onclick="formhash(this.form, this.form.login_password);" />
+        <input class="commit_button" type="submit" value="Login" onclick="formhash(this.form, this.form.login_password);" />
         <div>
             <p>Non sei ancora registrato? <a class="info" href="<?php echo ROOT_URL; ?>public?page=registrazione">Registrati adesso!</a>
             </p>
