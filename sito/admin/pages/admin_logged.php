@@ -46,6 +46,6 @@ if (isset($_POST['update-data'])) {
         <p class="operationDescription">
             Aggiorna le tue e-mail e password.
         </p>
-        <a id="btn-admin" class="commit_button" href="<?php echo ROOT_URL . "public?page=modify_data" ?>"">Prosegui</a>
+        <a id="btn-admin" class="commit_button" href="<?php echo ROOT_URL . "public?page=modify_data" ?>">Prosegui</a>
     </div>
 </div>
