@@ -18,12 +18,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
         if (this.getAttribute('aria-expanded') == 'false') {
             this.setAttribute('aria-expanded', 'true');
             sidenav.style.display = 'block';
-            //disableScroll();
+            disableScroll();
             button.classList.toggle('open');
         } else {
             this.setAttribute('aria-expanded', 'false');
             sidenav.style.display = 'none';
-            //enableScroll();
+            enableScroll();
             button.classList.toggle('open');
         }
     }
