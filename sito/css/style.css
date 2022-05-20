@@ -545,13 +545,40 @@ h3.product_name {
     padding-bottom: 40px;
 }
 
-.item-qty,
-.cart-btn,
-.cart-btn-delete,
+.label_cart_btn, .delete_button.cart_button  {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-decoration: solid;
+    align-self: center;
+    color: var(--main-title-color);
+    background-color: var(--main-bg-color);
+    font-weight: bold;
+    font-size: xx-large;
+    outline: none;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+
 form.delete-btn {
     margin: 0;
-    margin-left: 2px;
-    margin-right: 2px;
+    padding: 0;
+    background-color: var(--main-bg-color);
+    border-radius: 0.5rem;
+    border-color: var(--main-bg-color);
+    border-style: solid;
+}
+
+.delete_button.cart_button {
+    border-radius: 0.5rem;
+    border-color: var(--main-title-color);
+    border-style: solid;
+}
+
+.item-qty,
+.cart-btn,
+.cart-btn-delete {
+    margin: 0;
     padding-top: 0;
     padding-bottom: 0;
     background-color: var(--main-bg-color);
@@ -562,27 +589,12 @@ form.delete-btn {
     border-style: solid;
 }
 
-.delete_button {
-    margin: 0;
-    margin-left: 2px;
-    margin-right: 2px;
-    padding: 0;
-    text-align: center;
-    text-decoration: solid;
-    color: var(--main-title-color);
-    background-color: #eff7e3;
-    font-weight: bold;
-    outline: none;
-    transition: .2s ease-in;
-    cursor: pointer;
-}
-
-input.delete_button {
+input.delete_button.cart_button {
     width: 100%;
     padding: 1%;
 }
 
-.delete_button:hover,
+.delete_button.cart_button:hover,
 .cart-btn:hover, .btn-admin:hover {
     border: 2px solid;
     border-radius: 0.5rem;

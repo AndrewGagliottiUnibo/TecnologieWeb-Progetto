@@ -40,7 +40,7 @@ $cart_items = $cm->getCartItems($cartId);
                         <div class="buttons">
                             <form class="delete-btn">
                                 <label class="label_cart_id"><input class="item-qty" type="hidden" name="<?php echo htmlspecialchars($item['id']); ?>"></label>
-                                <label><input aria-label="rimuovi dal carrello" class="delete_button cart_button" name="delete" type="button" value=" Rimuovi "></label>
+                                <label class="label_cart_btn"><input aria-label="rimuovi dal carrello" class="delete_button cart_button" name="delete" type="button" value=" Rimuovi "></label>
                             </form>
                         </div>
                     </div>
