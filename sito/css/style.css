@@ -459,7 +459,8 @@ p.product_description {
 
 input#btn-add,
 input#btn-not-log,
-a#btn-pay {
+a#btn-pay,
+#btn-admin {
     margin: auto;
     margin-top: 10%;
     margin-bottom: 3%;
@@ -602,7 +603,7 @@ input.delete_button {
 }
 
 .delete_button:hover,
-.cart-btn:hover {
+.cart-btn:hover, #btn-admin:hover {
     border: 2px solid;
     border-radius: 0.5rem;
     background: var(--main-title-color);
@@ -949,6 +950,39 @@ aside>h2 {
 .advise {
     text-align: center;
     padding-top: 2%;
+}
+
+/* Admin page */
+.dbOperations {
+    margin: 2%;
+    padding: 2%;
+}
+
+h3.adminOperation {
+    margin: 2%;
+    padding: 2%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xx-large;
+    color: var(--main-title-color);
+    text-align: center;
+}
+
+p.operationDescription {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+    margin: 2%;
+    padding: 2%;
+}
+
+.separator {
+    border-style: solid;
+    border: 2px solid;
+    border-radius: 0.5rem;
+    background-color: white;
+    border-color: #0D2C05;
+    padding: 10px;
+    margin-bottom: 1%;
 }
 
 /* table */
