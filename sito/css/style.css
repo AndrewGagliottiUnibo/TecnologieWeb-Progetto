@@ -426,7 +426,7 @@ p.product_description {
 input#btn-add,
 input#btn-not-log,
 a#btn-pay,
-#btn-admin {
+.commit_button.btn-admin {
     margin: auto;
     margin-top: 10%;
     margin-bottom: 3%;
