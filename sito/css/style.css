@@ -431,7 +431,7 @@ p.product_description {
 input#btn-add,
 input#btn-not-log,
 a#btn-pay,
-#btn-admin {
+.commit_button.btn-admin {
     margin: auto;
     margin-top: 10%;
     margin-bottom: 3%;
@@ -583,7 +583,7 @@ input.delete_button {
 }
 
 .delete_button:hover,
-.cart-btn:hover, #btn-admin:hover {
+.cart-btn:hover, .btn-admin:hover {
     border: 2px solid;
     border-radius: 0.5rem;
     background: var(--main-title-color);
