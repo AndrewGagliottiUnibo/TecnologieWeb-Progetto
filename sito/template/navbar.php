@@ -2,13 +2,11 @@
     <div id="top-nav">
         <a class="logo-holder" aria-label="Pagina Principale" href="<?php echo ROOT_URL; ?>public?page=homepage">CacPlus</a>
 
-        <button id="hamburger" aria-label="Menù Navigazione" aria-expanded="false">
-            <div id="nav-icon3">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        <button id="hamburger" class="nav-icon3" aria-label="Menù Navigazione" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
     </div>
 
