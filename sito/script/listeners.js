@@ -17,7 +17,7 @@ $(document).ready(function () {
     $('body').on('click', '.cart_button', function () {
         var btn_value = $(this).attr('name');
         $(this).css("background-color", "black");
-        var id_product = $(this).siblings('.item-qty').attr('name');
+        var id_product = $(this).closest('label').siblings('.label_cart_id').children().attr('name');
         console.log(id_product);
         $("main").load("?page=load_cart #load_cart_update", {
             crt_value: btn_value,

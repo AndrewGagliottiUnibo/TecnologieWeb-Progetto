@@ -31,15 +31,15 @@ $cart_items = $cm->getCartItems($cartId);
                         </div>
 
                         <form class="quantity-modifier">
-                            <label><input class="item-qty" type="hidden" name="<?php echo htmlspecialchars($item['id']); ?>"></label>
+                            <label class="label_cart_id"><input class="item-qty" type="hidden" name="<?php echo htmlspecialchars($item['id']); ?>"></label>
                             <label><input aria-label="decrementa quantità" class="cart-btn cart_button" name="minus" type="button" value="-"></label>
-                            <span class="query_qty"><?php echo htmlspecialchars($item['quantity']); ?> </span>
+                            <p class="query_qty"><?php echo htmlspecialchars($item['quantity']); ?></p>
                             <label><input aria-label="incrementa quantità" class="cart-btn cart_button" name="plus" type="button" value="+"></label>
                         </form>
 
                         <div class="buttons">
                             <form class="delete-btn">
-                                <label><input class="item-qty" type="hidden" name="<?php echo htmlspecialchars($item['id']); ?>"></label>
+                                <label class="label_cart_id"><input class="item-qty" type="hidden" name="<?php echo htmlspecialchars($item['id']); ?>"></label>
                                 <label><input aria-label="rimuovi dal carrello" class="delete_button cart_button" name="delete" type="button" value=" Rimuovi "></label>
                             </form>
                         </div>
