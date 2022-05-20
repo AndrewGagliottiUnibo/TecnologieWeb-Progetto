@@ -952,10 +952,11 @@ aside>h2 {
 }
 
 /* table */
-section#notifications_section {
+.notifications_section {
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
 }
 
 table {

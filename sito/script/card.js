@@ -1,4 +1,4 @@
-const cards = document.querySelectorAll('.card');
+cards = document.querySelectorAll('.card');
 
 Array.prototype.forEach.call(cards, card => {
     let down, up, link = card.querySelector('h4 a');

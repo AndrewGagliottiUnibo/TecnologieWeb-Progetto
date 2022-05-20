@@ -2,35 +2,9 @@
 
 $cm = new CartManager();
 $cartId = $cm->getCurrentCartId();
-
-if (isset($_POST['delete'])) {
-    // rimuovo l'item dal carrello
-    $productId = htmlspecialchars($_POST['product_id']);
-    $cm->deleteFromCart($productId, $cartId);
-    header('Location:' . ROOT_URL . "shop?page=cart");
-    exit;
-}
-
-if (isset($_POST['minus'])) {
-    // rimuovo dal carrello
-    $productId = htmlspecialchars($_POST['product_id']);
-    $cm->removeFromCart($productId, $cartId);
-    header('Location:' . ROOT_URL . "shop?page=cart");
-    exit;
-}
-
-if (isset($_POST['plus'])) {
-    // aggiungo dal carrello
-    $productId = htmlspecialchars($_POST['product_id']);
-    $cm->addToCart($productId, $cartId);
-    header('Location:' . ROOT_URL . "shop?page=cart");
-    exit;
-}
-
 $cart_total = $cm->getCartTotal($cartId);
 $cart_items = $cm->getCartItems($cartId);
 ?>
-
 <h1 class="title">Carrello</h1>
 
 <aside>
@@ -56,17 +30,20 @@ $cart_items = $cm->getCartItems($cartId);
                             <p class="price">€<?php echo htmlspecialchars($item['total_price']); ?></p>
                         </div>
 
-                        <form class="quantity-modifier" method="post">
-                            <input class="item-qty" type="hidden" name="product_id" value="<?php echo htmlspecialchars($item['id']); ?>">
-                            <input class="cart-btn" name="minus" type="submit" value="-">
-                            <span class="query_qty" ><?php echo htmlspecialchars($item['quantity']); ?> </span>
-                            <input class="cart-btn" name="plus" type="submit" value="+">
+                        <form class="quantity-modifier">
+                            <input class="item-qty" type="hidden" name="<?php echo htmlspecialchars($item['id']); ?>">
+                            <label for="cart_button_minus"></label>
+                            <input id="cart_button_minus" class="cart-btn cart_button" name="minus" type="button" value="-">
+                            <span class="query_qty"><?php echo htmlspecialchars($item['quantity']); ?> </span>
+                            <label for="cart_button_plus"></label>
+                            <input id="cart_button_plus" class="cart-btn cart_button" name="plus" type="button" value="+">
                         </form>
 
                         <div class="buttons">
-                            <form class="delete-btn" method="post">
-                                <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($item['id']); ?>">
-                                <input class="delete_button" name="delete" type="submit" value=" Rimuovi ">
+                            <form class="delete-btn">
+                                <input class="item-qty" type="hidden" name="<?php echo htmlspecialchars($item['id']); ?>">
+                                <label for="cart_button_remove"></label>
+                                <input id="cart_button_remove" class="delete_button cart_button" name="delete" type="button" value=" Rimuovi ">
                             </form>
                         </div>
                     </div>

@@ -18,7 +18,7 @@ if (isset($_SESSION['user_id'])) {
 
 
 
-<section id="notifications_section">
+<section class="notifications_section">
     <?php if (login_check($mysqli)) : ?>
         <?php if (mysqli_num_rows($result) == 0) : ?>
             <h2>Nessuna notifica da mostrare!</h2>
