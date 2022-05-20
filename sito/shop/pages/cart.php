@@ -7,12 +7,12 @@ $cart_items = $cm->getCartItems($cartId);
 ?>
 <h1 class="title">Carrello</h1>
 
-<aside>
-    <h2><?php echo $cart_total['num_products'] ?> elementi nel carrello</h2>
-    <h2>Totale €<?php echo $cart_total['total'] ?></h2>
-</aside>
 
 <?php if (count($cart_items) > 0) : ?>
+    <aside>
+        <h2><?php echo $cart_total['num_products'] ?> elementi nel carrello</h2>
+        <h2>Totale €<?php echo $cart_total['total'] ?></h2>
+    </aside>
     <section class="shopping-cart">
         <ul class="products">
             <?php foreach ($cart_items as $item) : ?>
@@ -59,6 +59,6 @@ $cart_items = $cm->getCartItems($cartId);
         </section>
 
     <?php else : ?>
-        <h1>Nesun articolo nel carrello!</h1>
+        <h1>Nessun articolo nel carrello!</h1>
     <?php endif; ?>
     </section>
