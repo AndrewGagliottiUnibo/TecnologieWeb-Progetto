@@ -27,12 +27,11 @@ $cart_items = $cm->getCartItems($cartId);
 <div id="load_cart_update">
     <h1 class="title">Carrello</h1>
 
-    <aside>
-        <h2><?php echo $cart_total['num_products'] ?> elementi nel carrello</h2>
-        <h2>Totale €<?php echo $cart_total['total'] ?></h2>
-    </aside>
-
     <?php if (count($cart_items) > 0) : ?>
+        <aside>
+            <h2><?php echo $cart_total['num_products'] ?> elementi nel carrello</h2>
+            <h2>Totale €<?php echo $cart_total['total'] ?></h2>
+        </aside>
         <section class="shopping-cart">
             <ul class="products">
                 <?php foreach ($cart_items as $item) : ?>

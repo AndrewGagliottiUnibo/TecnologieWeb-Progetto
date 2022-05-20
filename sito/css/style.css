@@ -952,6 +952,14 @@ aside>h2 {
 }
 
 /* table */
+h2.cool_title, caption.cool_title {
+    margin: 2%;
+    padding: 2%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xx-large;
+    color: var(--main-title-color);
+}
 .notifications_section {
     display: flex;
     align-items: center;
