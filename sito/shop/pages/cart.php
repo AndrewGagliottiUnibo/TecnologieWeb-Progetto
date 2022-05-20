@@ -32,9 +32,9 @@ $cart_items = $cm->getCartItems($cartId);
 
                         <form class="quantity-modifier">
                             <label class="label_cart_id"><input class="item-qty" type="hidden" name="<?php echo htmlspecialchars($item['id']); ?>"></label>
-                            <label><input aria-label="decrementa quantità" class="cart-btn cart_button" name="minus" type="button" value="-"></label>
+                            <label><input aria-label="decrementa quantità" class="cart-btn cart_button" name="minus" type="button" value=" - "></label>
                             <p class="query_qty"><?php echo htmlspecialchars($item['quantity']); ?></p>
-                            <label><input aria-label="incrementa quantità" class="cart-btn cart_button" name="plus" type="button" value="+"></label>
+                            <label><input aria-label="incrementa quantità" class="cart-btn cart_button" name="plus" type="button" value=" + "></label>
                         </form>
 
                         <div class="buttons">
