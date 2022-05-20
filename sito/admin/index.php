@@ -13,6 +13,14 @@ $page = isset($_GET["page"]) ? $_GET["page"] : "homepage";
     <title>CacPlus.inc</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
     <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="../script/forms.js"></script>
+    <script src="../script/sha512.js"></script>
+    <script src="../script/listeners.js"></script>
+    <script src="../script/navbar.js"></script>
+    <script src="../script/card.js"></script>
+    <script src="../script/productHandler.js"></script>
 </head>
 
 <body>
@@ -23,9 +31,4 @@ $page = isset($_GET["page"]) ? $_GET["page"] : "homepage";
     <?php include ROOT_PATH . "/sito/template/footer.php"; ?>
 </body>
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-<script type="text/javascript" src="../script/navbar.js"></script>
-<script type="text/javascript" src="../script/adminButtonBox.js"></script>
-<script type="text/javascript" src="../script/card.js"></script>
 </html>
