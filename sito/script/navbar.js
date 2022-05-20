@@ -11,7 +11,6 @@ function enableScroll() {
 document.addEventListener('DOMContentLoaded', function (event) {
     let hamburger = document.getElementById('hamburger');
     let sidenav = document.getElementById('main-nav');
-    let button = document.getElementById('nav-icon3');
     // If JS is enabled, it will un-expand the hamburger
     hamburger.setAttribute('aria-expanded', 'false');
     hamburger.onclick = function () {
@@ -19,12 +18,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
             this.setAttribute('aria-expanded', 'true');
             sidenav.style.display = 'block';
             disableScroll();
-            button.classList.toggle('open');
+            hamburger.classList.toggle('open');
         } else {
             this.setAttribute('aria-expanded', 'false');
             sidenav.style.display = 'none';
             enableScroll();
-            button.classList.toggle('open');
+            hamburger.classList.toggle('open');
         }
     }
 });
