@@ -14,6 +14,7 @@ if (isset($_POST['email'], $_POST['p'])) {
    } else {
       // Login fallito
       echo 'Unsuccess login';
+      Header('Location:' . ROOT_URL . "public?page=login");
    }
 } else {
    // Le variabili corrette non sono state inviate a questa pagina dal metodo POST.
