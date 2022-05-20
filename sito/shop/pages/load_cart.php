@@ -27,6 +27,7 @@ $cart_items = $cm->getCartItems($cartId);
 <div id="load_cart_update">
     <h1 class="title">Carrello</h1>
 
+
     <?php if (count($cart_items) > 0) : ?>
         <aside>
             <h2><?php echo $cart_total['num_products'] ?> elementi nel carrello</h2>
@@ -50,19 +51,16 @@ $cart_items = $cm->getCartItems($cartId);
                             </div>
 
                             <form class="quantity-modifier">
-                                <input class="item-qty" type="hidden" name="<?php echo htmlspecialchars($item['id']); ?>">
-                                <label for="cart_button_minus"></label>
-                                <input id="cart_button_minus" class="cart-btn cart_button" name="minus" type="button" value="-">
-                                <span class="query_qty"><?php echo htmlspecialchars($item['quantity']); ?> </span>
-                                <label for="cart_button_plus"></label>
-                                <input id="cart_button_plus" class="cart-btn cart_button" name="plus" type="button" value="+">
+                                <label class="label_cart_id"><input class="item-qty" type="hidden" name="<?php echo htmlspecialchars($item['id']); ?>"></label>
+                                <label><input aria-label="decrementa quantità" class="cart-btn cart_button" name="minus" type="button" value="-"></label>
+                                <p class="query_qty"><?php echo htmlspecialchars($item['quantity']); ?></p>
+                                <label><input aria-label="incrementa quantità" class="cart-btn cart_button" name="plus" type="button" value="+"></label>
                             </form>
 
                             <div class="buttons">
                                 <form class="delete-btn">
-                                    <input class="item-qty" type="hidden" name="<?php echo htmlspecialchars($item['id']); ?>">
-                                    <label for="cart_button_remove"></label>
-                                    <input id="cart_button_remove" class="delete_button cart_button" name="delete" type="button" value=" Rimuovi ">
+                                    <label class="label_cart_id"><input class="item-qty" type="hidden" name="<?php echo htmlspecialchars($item['id']); ?>"></label>
+                                    <label><input aria-label="rimuovi dal carrello" class="delete_button cart_button" name="delete" type="button" value=" Rimuovi "></label>
                                 </form>
                             </div>
                         </div>
@@ -78,7 +76,7 @@ $cart_items = $cm->getCartItems($cartId);
             </section>
 
         <?php else : ?>
-            <h1>Nesun articolo nel carrello!</h1>
+            <h1>Nessun articolo nel carrello!</h1>
         <?php endif; ?>
         </section>
 </div>

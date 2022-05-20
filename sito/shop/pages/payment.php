@@ -33,7 +33,7 @@
         </div>
 
         <div class="btn">
-            <a class="pay" href="<?php echo ROOT_URL; ?>shop?page=commit_order">Pay</a>
+            <a class="pay" href="<?php echo ROOT_URL; ?>shop?page=commit_order">Paga</a>
         </div>
 
     </div>
