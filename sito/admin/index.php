@@ -27,7 +27,11 @@ $page = isset($_GET["page"]) ? $_GET["page"] : "homepage";
 <body>
     <?php include ROOT_PATH . "/sito/template/navbar.php"; ?>
     <main>
-        <?php include ROOT_PATH . "/sito/admin/pages/" . $page . ".php"; ?>
+        <?php if (isAdmin($mysqli)) : ?>
+            <?php include ROOT_PATH . "/sito/admin/pages/" . $page . ".php"; ?>
+        <?php else : ?>
+            <h2>Non hai il permesso di visualizzare questa pagina</h2>
+        <?php endif; ?>
     </main>
     <?php include ROOT_PATH . "/sito/template/footer.php"; ?>
 </body>
