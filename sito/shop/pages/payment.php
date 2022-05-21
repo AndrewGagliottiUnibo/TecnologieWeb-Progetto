@@ -8,16 +8,16 @@
     </div>
 
     <form id="payment_form" action="?page=commit_order" method="post" class="payment_form">
-        <label for="proprietario" class="label_data">Proprietario:</label>
+        <label for="proprietario" class="label_data"><span class="material-icons">person</span> Proprietario:</label>
         <input id="proprietario" type="text" class="input_data" placeholder="Nome Cognome" required>
         
-        <label for="carta" class="label_data">Numero carta:</label>
+        <label for="carta" class="label_data"><span class="material-icons">credit_card</span> Numero carta:</label>
         <input id="carta" type="text" class="input_data" data-mask="0000 0000 0000 0000" placeholder="Numero carta" required>
 
-        <label for="scadenza" class="label_data">Scadenza:</label>
+        <label for="scadenza" class="label_data"><span class="material-icons">today</span> Scadenza:</label>
         <input id="scadenza" type="text" name="expiry-data" class="input_data" data-mask="00 / 00" placeholder="00 / 00" required>
 
-        <label for="cvc" class="label_data">CVC:</label>
+        <label for="cvc" class="label_data"><span class="material-icons">lock</span> CVC:</label>
         <input id="cvc" type="text" class="input_data" data-mask="000" placeholder="000" required>
      
         <input id="payment" class="pay" type="submit" value="Paga">
