@@ -14,28 +14,28 @@
     <div id="main-nav">
         <ul>
             <li>
-                <a href="<?php echo ROOT_URL; ?>public?page=login"><button class="material-icons" name="all">account_circle</button> Profilo</a>
+                <a href="<?php echo ROOT_URL; ?>public?page=login"><span class="material-icons">account_circle</span> Profilo</a>
             </li>
             <?php if (isAdmin($mysqli)) : ?>
                 <li>
-                    <a href="<?php echo ROOT_URL; ?>admin?page=admin_logged"><button class="material-icons" name="all">manage_accounts</button> Admin</a>
+                    <a href="<?php echo ROOT_URL; ?>admin?page=admin_logged"><span class="material-icons">manage_accounts</span> Admin</a>
                 </li>
             <?php else : ?>
                 <li>
-                    <a href="<?php echo ROOT_URL; ?>shop?page=cart"><button class="material-icons" name="all">shopping_cart</button> Carrello</a>
+                    <a href="<?php echo ROOT_URL; ?>shop?page=cart"><span class="material-icons">shopping_cart</span> Carrello</a>
                 </li>
             <?php endif; ?>
             <li>
-                <a class="collapsable" href="<?php echo ROOT_URL; ?>shop?page=catalogo"><button class="material-icons" name="all">shop_2</button> Catalogo</a>
+                <a class="collapsable" href="<?php echo ROOT_URL; ?>shop?page=catalogo"><span class="material-icons">shop_2</span> Catalogo</a>
             </li>
             <li>   
-                <a class="collapsable" href="<?php echo ROOT_URL; ?>public?page=notification"><button class="material-icons" name="all">notifications</button> Notifiche</a>
+                <a class="collapsable" href="<?php echo ROOT_URL; ?>public?page=notification"><span class="material-icons">notifications</span> Notifiche</a>
             </li>
             <li>
-                <a class="collapsable" href="<?php echo ROOT_URL; ?>public?page=info"><button class="material-icons" name="all">info</button> Info e Contatti</a>
+                <a class="collapsable" href="<?php echo ROOT_URL; ?>public?page=info"><span class="material-icons">info</span> Info e Contatti</a>
             </li>
             <li>
-                <a class="collapsable" href="<?php echo ROOT_URL; ?>public?page=chi_siamo"><button class="material-icons" name="all">work_outline</button> Chi Siamo</a>
+                <a class="collapsable" href="<?php echo ROOT_URL; ?>public?page=chi_siamo"><span class="material-icons">work_outline</span> Chi Siamo</a>
             </li>
         </ul>
     </div>

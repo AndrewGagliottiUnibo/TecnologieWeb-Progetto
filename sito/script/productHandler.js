@@ -6,4 +6,8 @@ $(document).ready(function () {
     $("#btn-not-log").click(function () {
         alert('Non hai effettuato il login. Accedi o Registrati ora per usufruire al meglio dell\'esperienza di Cacplus')
     });
+
+    $("#payment").click(function () {
+        alert('Il pagamento è andato a buon fine!');
+    });
 });
