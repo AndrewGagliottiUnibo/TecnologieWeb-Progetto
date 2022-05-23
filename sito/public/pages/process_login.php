@@ -13,7 +13,7 @@ if (isset($_POST['email'], $_POST['p'])) {
       }
    } else {
       // Login fallito
-      echo 'Unsuccess login';
+      $_SESSION['error'] = "Password o e-mail errata";
       Header('Location:' . ROOT_URL . "public?page=login");
    }
 } else {

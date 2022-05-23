@@ -7,11 +7,11 @@ if (isset($_POST['email'], $_POST['p'])) {
    $email = $_POST['email'];
    $password = $_POST['p']; // Recupero la password criptata.
    if (registration($username, $email, $password, $mysqli) == true) {
-      // Login success
-      echo 'Registrazione eseguita con successo!';
+      login($email, $password, $mysqli);
+      Header('Location:' . ROOT_URL . "public?page=login");
    } else {
       // Login failed
-      echo 'Registrazione Fallita';
+      $_SESSION['error'] = "Registrazione Fallita";
    }
 } else {
    // Wrong data

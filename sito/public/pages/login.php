@@ -5,6 +5,11 @@ require_once ROOT_PATH . "/sito/public/pages/process_login.php";
 if (isset($_GET['error'])) {
     echo 'Error Logging In!';
 }
+$message = "";
+if (isset($_SESSION['error'])) {
+    $message = $_SESSION['error'];
+    $_SESSION['error'] = "";
+}
 ?>
 
 
@@ -15,6 +20,7 @@ if (isset($_GET['error'])) {
         <input id="login_email" type="text" name="email" required />
         <label for="login_password">Password</label>
         <input id="login_password" type="password" name="p" required />
+        <span><?php echo ($message) ?></span>
         <input class="commit_button" type="submit" value="Login" onclick="formhash(this.form, this.form.login_password);" />
         <div>
             <p>Non sei ancora registrato? <a class="info" href="<?php echo ROOT_URL; ?>public?page=registrazione">Registrati adesso!</a>

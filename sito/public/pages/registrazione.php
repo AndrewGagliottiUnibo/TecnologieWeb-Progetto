@@ -1,5 +1,10 @@
 <?php
 require_once ROOT_PATH . "/sito/script/functions.php";
+$message = "";
+if (isset($_SESSION['error'])) {
+    $message = $_SESSION['error'];
+    $_SESSION['error'] = "";
+}
 ?>
 <h1>Registrazione</h1>
 <form action="?page=process_registration" method="post" name="registration_form">
@@ -9,6 +14,7 @@ require_once ROOT_PATH . "/sito/script/functions.php";
     <input id="registration_email" type="text" name="email" required />
     <label for="registration_password">Password</label>
     <input id="registration_password" type="password" name="p" id="password" required />
+    <span><?php echo ($message) ?></span>
     <input class="commit_button" type="submit" value="Registrati" onclick="formhash(this.form, this.form.registration_password)" />
 </form>
 <section id="about">

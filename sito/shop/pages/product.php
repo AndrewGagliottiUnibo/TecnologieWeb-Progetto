@@ -40,7 +40,7 @@ $product = $productsMgr->get($id);
   </div>
 
 
-  <?php if ($usrLogged) : ?>
+  <?php if ($usrLogged && !isAdmin($mysqli)) : ?>
     <input class="commit_button" id="btn-add" name="add_to_cart" type="submit" value="Aggiungi al carrello">
   <?php else : ?>
     <input class="commit_button" id="btn-not-log" name="add_to_cart" type="submit" value="Aggiungi al carrello">

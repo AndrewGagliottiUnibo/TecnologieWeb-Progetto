@@ -34,8 +34,13 @@ function formModifyHash(form, old_Password, new_Password, confirm_Password) {
   newPassword.type = "hidden"
   newPassword.value = hex_sha512(new_Password.value);
   // Assicurati che la password non venga inviata in chiaro.
-  old_Password.value = "old";
-  new_Password.value = "new";
+  if (old_Password.value != "" || new_Password.value != "") {
+    old_Password.value = " ";
+    new_Password.value = " ";
+  } else {
+    old_Password.value = "";
+    new_Password.value = "";
+  }
   // Come ultimo passaggio, esegui il 'submit' del form.
 
   form.submit();
