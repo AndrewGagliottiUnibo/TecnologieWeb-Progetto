@@ -618,8 +618,6 @@ button {
     cursor: pointer;
 }
 
-
-.nav-icon3:focus span,
 .nav-icon3:hover span {
     background: var(--main-bg-color);
 }
