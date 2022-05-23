@@ -921,6 +921,10 @@ aside>h2 {
     padding-top: 2%;
 }
 
+#payment_form label {
+    background-color: #eff7e3;
+}
+
 /* Admin page */
 .dbOperations {
     margin: 2%;
