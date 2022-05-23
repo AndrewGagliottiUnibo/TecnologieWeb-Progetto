@@ -85,10 +85,11 @@ nav {
     display: none;
 }
 
-#main-nav ul li a:hover,
-#main-nav ul li a:focus {
+#main-nav ul li:hover *,
+#main-nav ul li:focus * {
     background: var(--main-hv-color);
 }
+
 
 nav>ul {
     display: flex;
@@ -101,12 +102,6 @@ nav>ul {
     text-decoration: solid;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: black;
-}
-
-.bottom_nav a:hover,
-.bottom_nav a:hover *,
-.top_nav a:hover * {
-    background-color: var(--main-hv-color);
 }
 
 
@@ -540,7 +535,8 @@ h3.product_name {
     padding-bottom: 40px;
 }
 
-.label_cart_btn, .delete_button.cart_button  {
+.label_cart_btn,
+.delete_button.cart_button {
     margin: 0;
     padding: 0;
     text-align: center;
@@ -590,7 +586,8 @@ input.delete_button.cart_button {
 }
 
 .delete_button.cart_button:hover,
-.cart-btn:hover, .btn-admin:hover {
+.cart-btn:hover,
+.btn-admin:hover {
     border: 2px solid;
     border-radius: 0.5rem;
     background: var(--main-title-color);
@@ -799,13 +796,13 @@ section.payment {
     position: relative;
 }
 
-form.payment_form{
+form.payment_form {
     width: 100%;
     margin: auto;
     padding: 20px;
 }
 
-.label_data{
+.label_data {
     width: 100%;
     padding: 10px;
     border: none;
@@ -825,7 +822,8 @@ form.payment_form{
     color: var(--main-title-color);
 }
 
-form.payment_form, .label_data {
+form.payment_form,
+.label_data {
     display: block;
     color: var(--main-title-color);
     margin-bottom: 6px;
