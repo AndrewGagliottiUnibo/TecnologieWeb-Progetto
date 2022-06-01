@@ -1,0 +1,116 @@
+/*
+    Definizioni generali
+*/
+body {
+    /* Testo valido ovunque */
+    font-family: monospace;
+    font-size: 100%;
+}
+
+nav, aside, section {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/*
+    Header
+*/
+header {
+    /* Sfondo */
+    background-image: linear-gradient(to bottom right, pink, yellow, pink, purple);
+    width: 100%;
+    /* Divisori */
+    border-bottom: 3px solid purple;
+    padding: 20px 0px;
+}
+
+header > h1 {
+    /* Testo */
+    text-align: right;
+    color: purple;
+}
+
+/*
+    Section
+*/
+section {
+    /* Divisori */
+    float: right;
+    width: 50%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 2%;
+}
+
+section > p {
+    text-align: left;
+    color: black;
+}
+
+/*
+    Nav
+*/
+nav {
+    /* Divisori */
+    width: 15%;
+    margin-top: 1%;
+    margin-left: 1%;
+    border-top: 3px solid purple;
+    border-bottom: 3px solid purple;
+    /* Sfondo */
+    background-image: linear-gradient(to bottom right, pink, yellow, pink, purple);
+}
+
+nav > ul {
+    /* Testo */
+    list-style: square;
+    text-align: left;
+    line-height: 2.0;
+}
+
+nav:hover {
+    /* Sfondo */
+    background-image: linear-gradient(to top left, pink, yellow, pink, purple);
+}
+
+nav > ul > li > a:hover {
+    /* Testo */
+    background-color: purple;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    /* Divisori */
+    padding: 1%;
+}
+
+/*
+    Aside
+*/
+aside {
+    /* Divisori */
+    width: 20%;
+    margin-top: 2%;
+    margin-left: 6%;
+    /* Testo */
+    color: purple;
+}
+
+/*
+    Footer
+*/
+footer {
+    /* Sfondo */
+    clear: both;
+    background-image: linear-gradient(to top left, pink, yellow, pink, purple);
+    width: 100%;
+    padding: 10px 0;
+    margin: 1% 0%;
+    border-top: 3px solid purple;
+}
+
+footer > p {
+    /* Testo */
+    color: purple;
+    text-align: center;
+    font-size: 80%;
+}

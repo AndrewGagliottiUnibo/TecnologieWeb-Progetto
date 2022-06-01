@@ -1,0 +1,36 @@
+In ambito Web, la definizione di USABILITA' va a rimarcare
+quella che e' la definizione originaria: dovendo relazionare
+le persone a degli oggetti (in questo caso, componenti informatici)
+ci si trova davanti al problema di dover realizzare dei supporti (e.g. 
+interfacce) che garantiscano una instaurazione user-friendly tra un 
+elemento web e l'utente che ne deve usufruire.
+Si tratta quindi di porre al centro dell'attenzione delle fasi 
+progettuali l'utente, cercando di creare un prodotto che sia destinato 
+ad esso e per poter essere usato da questo nel modo più semplice e diretto
+possibile, creando una interazione immediata.
+Questa profonda caratteristica OGGETTIVA, che va quindi a modellare 
+componenti relativi all'uso di un sito web, sono indici di una
+buona progettazione e di qualità del software, che lo rendono "a portata"
+di tutti.
+
+Questa buona norma di progettazione cambia pero' in favore di quella 
+che e' la USER EXPERIENCE, la quale altro non e' che una VALUTAZIONE
+SOGGETTIVA sulla fruibilità di un sito web, di come un utente riesce 
+ad interagirci e a trovare cio' di cui necessità in base ai suoi gusti.
+Essendo un campo soggettivo non ci sono vere e proprie linee guida o
+modus operandi specifici per realizzare una componente che sia piacevole
+per tutti: bisogna prendere in considerazione l'atmosfera emozionale
+dell'utente e considerarla come un vero e proprio metro di misura.
+Non e' possibile quindi, a priori, determinare quella che sarà la 
+reazione di un utente difronte a una particolare interfaccia, anche 
+se si possono adottare strategie che sono piu' legate alla usabilità,
+quali: scelta combinata di colori, fonts, ordinamento delle componenti
+di una pagina e via dicendo.
+
+In massima istanza, si potrebbe paragonare l'USABILITA' e la 
+USER EXPERIENCE indicando la prima come una implementazione semplice e
+funzionale, ma non sempre ben gradita, mentre la seconda come una
+implementazione piu' complessa ma più piacevole.
+E' anche vero, pero', che esistono studi specifici che si occupano di
+analizzare caratteristiche generali a favorire una migliore USER 
+EXPERIENCE e garantendo comunque una ottima usabilita'.
