@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <title>Esercizio Accordion</title>
+    <style>
+      div.accordion > button{
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+      }
+      div.accordion > button:hover, div.accordion > button.selected{
+        background-color: #ccc;
+      }
+
+      div.accordion > div {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+      }
+
+    </style>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="accordion.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="accordion">
+      <button>Titolo 1</button>
+      <div>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis molestiae mollitia deserunt aut adipisci harum delectus dolores exercitationem rem accusamus beatae, soluta dolor quos sequi tenetur distinctio rerum ab voluptatum.
+      </div>
+      <button>Titolo 2</button>
+      <div>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis molestiae mollitia deserunt aut adipisci harum delectus dolores exercitationem rem accusamus beatae, soluta dolor quos sequi tenetur distinctio rerum ab voluptatum.
+      </div>
+      <button>Titolo 3</button>
+      <div>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis molestiae mollitia deserunt aut adipisci harum delectus dolores exercitationem rem accusamus beatae, soluta dolor quos sequi tenetur distinctio rerum ab voluptatum.
+      </div>
+
+    </div>
+  </body>
+</html>

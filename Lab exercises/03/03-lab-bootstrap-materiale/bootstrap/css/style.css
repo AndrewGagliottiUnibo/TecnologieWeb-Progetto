@@ -1,0 +1,20 @@
+/*
+    Gestione immagine numero 1.
+*/
+article > header > div > img {
+    max-height: 200px;
+}
+/*
+    Se il mouse sovrasta un link, diventa rosso.
+*/
+a:hover {
+    color: rgb(219, 69, 83) !important;
+}
+/*
+    Immagine aside
+*/
+aside > ul > li > img {
+    width: 50px;
+    float: left;
+    margin-right: 5px;
+}

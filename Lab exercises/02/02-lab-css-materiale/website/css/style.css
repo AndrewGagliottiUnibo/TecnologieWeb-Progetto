@@ -1,0 +1,274 @@
+/*
+    Regole di reset dello stile, la scritta si attacca al bordo della pagina.
+*/
+body, h1, ul {
+    margin: 0;
+    padding: 0;
+}
+/*
+    Colore di sfondo della pagina.
+*/
+body {
+    background-color: #e4e4e4;
+}
+/*
+    Colore di sfondo dell'header principale.
+    Allineamento del testo.
+    Colore del testo.
+    Stile del testo.
+    Padding.
+*/
+body > header, body > footer {
+    background-color: rgb(54, 54, 54);
+    text-align: center;
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+    padding: 20px 0px;
+}
+/*-----------------------------------------------------------------------------------------------------------------*/
+/*
+    Margini del menu' di navigazione.
+*/
+nav {
+    margin: 0 5%;
+}
+/*
+    Elimino i punti dall'elenco.
+*/
+nav ul {
+    list-style: none;
+}
+/*
+    Contenuto e elementi affiancati fra loro.
+    Larghezza testo.
+    Allineamento.
+*/
+nav ul li {
+    display: inline-block;
+    width: 45%;
+    background-color: rgb(54, 54, 54);
+    margin-top: 10px;
+    text-align: center;
+}
+/*
+    Gestisco il posizionamento del nav nella pagina.
+*/
+nav ul li:nth-child(odd) {
+    margin-right: 10%;
+}
+/*
+    Lo si definisce a parte per essere il piu' specifici possibili:
+    si vuole che tutte le caratteristiche vengano ereditate e che siano
+    quindi funzionali.
+    text-decoration gestisce caratteristiche particolari che vogliamo siano presenti.
+
+    Colore del testo
+    Decorazione
+    Font.
+*/
+nav ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*
+    Gestisco l'evento del mouse che ci passa sopra.
+*/
+nav ul li a:hover {
+    color: rgb(219, 69, 83);
+}
+/*-----------------------------------------------------------------------------------------------------------------*/
+/*
+    Contenuto principale della pagina.
+
+    Margini.
+*/
+main {
+    margin: 20px 5% 0%;
+}
+/*
+    Tutti gli article figli maggiori di main.
+    Background e bordi
+*/
+main > article, main > section {
+    background-color: #fff;
+    border: 1px solid #cacaca;
+    margin-bottom: 20px;
+}
+/*
+    Dimensioni immagine.
+*/
+main > article > header > div {
+    height: 200px;
+    text-align: center;
+}
+/*
+    Dimensioni massime delle immagine.
+*/
+main > article > header > div > img {
+    
+    max-width: 100%;
+    max-height: 100%;
+}
+/*
+    Gestisco titoli del main.
+    
+    Padding.
+    Font.
+*/
+main > article > header > h2, main > article > header > p {
+    padding: 0% 5%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*
+    Gestisco testo del main.
+*/
+main > article > section > p {
+    padding: 0% 5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+main > article > header > p {
+    font-size: 12px;
+}
+main > section > table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    text-align: center;
+}
+main > section > table td, main > section > table th {
+    border: 1px solid black;
+    padding: 5px 0;
+}
+main > section > table th {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/*
+    Gestione bottone "leggi tutto".
+*/
+main > article > footer, main > form > ul > li > input[type="submit"] {
+    padding: 20px 5%;
+    text-align: right;
+}
+main > article > footer > a, form input[type="submit"] {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: black;
+    background-color: #e4e4e4;
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*
+    Tabella dei contatti.
+*/
+main > section > h2, main > form > h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+main > section {
+    padding: 0 5% 20px;
+}
+
+main > article > footer > a:hover, aside > section > ul > li > a:hover {
+    color: rgb(219, 69, 83);
+}
+/*
+    Fine tabella dei contatti.
+*/
+/*
+    Form
+*/
+form {
+    padding: 0 5% 20px;
+}
+form ul {
+    width: 80%;
+    margin: 0 10%;
+}
+form ul li {
+    margin-bottom: 20px;
+}
+form ul li:last-child {
+    text-align: right;
+}
+form ul li label {
+    display: inline-block;
+    width: 50%;
+    cursor: pointer;
+}
+form ul li input:not([type="submit"]) {
+    width: 50%;
+    box-sizing: border-box;
+}
+form ul li input[type="submit"] {
+    border-width: 1px;
+}
+
+/*
+    Menù PHP.
+*/
+aside {
+    margin: 0 5% 20px;
+    background-color: white;
+    border: 1px solid #cacaca ;
+}
+aside > section > ul > li > img {
+    width: 50px;
+    float: left;
+    margin-right: 5px;
+}
+aside > section > ul {
+    list-style: none;
+}
+aside > section > ul > li {
+    margin-bottom: 10px;
+}
+aside > section {
+    padding: 0 5% 20px;
+}
+aside > section > h2 {
+    font: bold 16px 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+aside > section > ul > li > a {
+    text-decoration: none;
+    color:black;
+    font: bold 16px 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*
+    Visualizzazione sugli schermi grandi. Non si usa più > perché si è indifferenti.
+*/
+@media screen and (min-width: 768px) {
+    nav {
+        margin: 0 10%;
+    }
+    /*  spaziatura list item    */
+    nav ul li {
+        width: 19%;
+    }
+    /*   tutti gli elementi tranne l'ultimo   */
+    nav ul li:not(:last-child) {
+        margin-right: 8%;
+    }
+    /*   Allineamento elementi. Elementi di blocco che vanno uno sotto l'altro e poi devono essere risistemati a piacimento.  */
+    main {
+        width: 50%;
+        margin: 20px 5% 0 10%;
+    }
+    aside {
+        width: 25%;
+        margin: 20px 10% 0 0;
+        /*  padding e border rientrano nella pagina senza seguire il flusso della pagina ma creando allineamento    */
+        box-sizing: border-box;
+    }
+    main, aside {
+        display: inline-block;
+        vertical-align: top;
+    }
+    main > section > table {
+        width: 80%;
+        margin: 0 10%;
+    }
+}
